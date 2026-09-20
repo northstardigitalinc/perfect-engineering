@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Perfect Engineering Limited | Precision Stainless Steel Manufacturing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --void:#000;--bone:#fff;--charcoal:#111;--panel:#1e1e1e;--panel2:#252525;
+  --fd:'Cormorant Garamond',Georgia,serif;--fb:'Inter',system-ui,sans-serif;
+  --dp:clamp(80px,11vw,160px);--hd:clamp(44px,6vw,80px);--sh:clamp(30px,4vw,54px);
+  --r50:50px;--rpill:1000px;
+  --s8:8px;--s12:12px;--s16:16px;--s24:24px;--s32:32px;--s48:48px;--s64:64px;--s96:96px;--s128:128px;
+  --ease:cubic-bezier(.16,1,.3,1);--ease2:cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--void);color:var(--bone);font-family:var(--fb);font-size:17px;line-height:1.65;letter-spacing:-.01em;overflow-x:hidden;-webkit-font-smoothing:antialiased;opacity:0;animation:pagein .6s var(--ease) .05s forwards}
+@keyframes pagein{to{opacity:1}}
+
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+
+/* ── UTILITIES ── */
+.disp{font-family:var(--fd);font-size:var(--dp);font-weight:300;line-height:.85;letter-spacing:-.025em}
+.hd{font-family:var(--fd);font-size:var(--hd);font-weight:300;line-height:.9;letter-spacing:-.02em}
+.sh{font-family:var(--fd);font-size:var(--sh);font-weight:300;line-height:.95;letter-spacing:-.015em}
+.body{font-size:17px;line-height:1.82;color:rgba(255,255,255,.58)}
+.wrap{max-width:1440px;margin:0 auto;padding:0 var(--s48)}
+.sec{padding:var(--s128) 0}
+.shdr{display:grid;grid-template-columns:1fr 1fr;gap:var(--s64);align-items:flex-end;margin-bottom:var(--s64)}
+.ey{display:flex;align-items:center;gap:var(--s16);margin-bottom:var(--s32)}
+.eline{width:32px;height:1px;background:rgba(255,255,255,.2)}
+.etxt{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.33)}
+.pill{display:inline-flex;align-items:center;padding:6px 18px;border:1px solid rgba(255,255,255,.15);border-radius:var(--rpill);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.5);white-space:nowrap}
+.tag{padding:4px 14px;border:1px solid rgba(255,255,255,.1);border-radius:var(--rpill);font-size:12px;color:rgba(255,255,255,.38);letter-spacing:.04em}
+.btnp{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:var(--bone);border:1px solid var(--bone);border-radius:var(--rpill);font-size:13px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--void);transition:opacity .25s,transform .3s var(--ease)}
+.btnp:hover{opacity:.82;transform:translateY(-2px)}
+.btng{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;border:1px solid rgba(255,255,255,.25);border-radius:var(--rpill);font-size:13px;font-weight:400;letter-spacing:.07em;text-transform:uppercase;color:var(--bone);transition:border-color .25s,background .25s,transform .3s var(--ease)}
+.btng:hover{border-color:rgba(255,255,255,.55);background:rgba(255,255,255,.05);transform:translateY(-2px)}
+.bgrp{display:flex;gap:var(--s16);flex-wrap:wrap;justify-content:center}
+@media(max-width:768px){.wrap{padding:0 var(--s24)}.sec{padding:var(--s96) 0}.shdr{grid-template-columns:1fr;gap:var(--s32)}}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 var(--s48);height:70px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
+nav.sc{background:rgba(0,0,0,.93);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-color:rgba(255,255,255,.07)}
+.nlogo{display:flex;align-items:center;transition:opacity .2s}
+.nlogo img{height:50px;width:auto}
+.nlogo:hover{opacity:.7}
+.nlinks{display:flex;align-items:center;gap:28px;list-style:none}
+.nlinks a{font-size:14px;color:rgba(255,255,255,.5);position:relative;padding-bottom:2px;transition:color .2s}
+.nlinks a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--bone);transition:width .35s var(--ease)}
+.nlinks a:hover,.nlinks a.active{color:var(--bone)}
+.nlinks a:hover::after,.nlinks a.active::after{width:100%}
+.nlinks a.page-link{color:rgba(255,255,255,.75)}
+.ncta{font-size:13px;color:var(--bone);border:1px solid rgba(255,255,255,.25);border-radius:var(--rpill);padding:9px 24px;letter-spacing:.06em;transition:all .25s}
+.ncta:hover{border-color:rgba(255,255,255,.6);background:rgba(255,255,255,.06);transform:translateY(-1px)}
+.nmob{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.nmob span{width:22px;height:1.5px;background:var(--bone);display:block;transition:transform .35s var(--ease),opacity .25s}
+.nmob.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nmob.open span:nth-child(2){opacity:0}
+.nmob.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+@media(max-width:900px){.nlinks{display:none}.nmob{display:flex}nav{padding:0 var(--s24)}}
+
+/* mobile menu */
+.mobmenu{position:fixed;inset:0;z-index:150;background:rgba(0,0,0,.97);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:var(--s24);opacity:0;pointer-events:none;transition:opacity .4s var(--ease)}
+.mobmenu.open{opacity:1;pointer-events:all}
+.mobmenu a{font-family:var(--fd);font-size:clamp(36px,8vw,60px);font-weight:300;color:rgba(255,255,255,.7);transition:color .2s,transform .2s}
+.mobmenu a:hover{color:var(--bone);transform:translateX(8px)}
+.mob-divider{width:40px;height:1px;background:rgba(255,255,255,.12);margin:var(--s8) 0}
+.mob-contact{display:flex;flex-direction:column;align-items:center;gap:var(--s12);margin-top:var(--s8)}
+.mob-contact a{font-size:14px;color:rgba(255,255,255,.35);letter-spacing:.05em;transition:color .2s}
+.mob-contact a:hover{color:var(--bone)}
+
+/* ── HERO ── */
+.hero{min-height:100vh;position:relative;display:flex;flex-direction:column;overflow:hidden}
+.hbg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hbg img,.hbg video{width:100%;height:115%;object-fit:cover;object-position:center;filter:brightness(.32);will-change:transform;transition:opacity .8s ease}
+.hbg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.05) 0%,rgba(0,0,0,.45) 55%,rgba(0,0,0,1) 100%)}
+.hcont{position:relative;z-index:1;flex:1;display:flex;align-items:flex-end;width:100%;padding:var(--s128) var(--s48) var(--s48)}
+@media(max-width:768px){.hcont{padding:100px var(--s24) var(--s32)}}
+.hmeta{display:flex;flex-wrap:wrap;gap:var(--s12);margin-bottom:var(--s48)}
+.hgrid{display:grid;grid-template-columns:1fr auto;gap:var(--s48);align-items:flex-end}
+@media(max-width:900px){.hgrid{grid-template-columns:1fr}}
+.htag{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.33);margin-bottom:var(--s24)}
+.hright{position:absolute;right:var(--s48);bottom:calc(var(--s48) + 12px);display:flex;flex-direction:column;align-items:flex-end;gap:var(--s12)}
+@media(max-width:768px){.hright{display:none}}
+.scr{margin-top:var(--s48);display:flex;align-items:center;gap:var(--s16)}
+.sline{width:48px;height:1px;background:rgba(255,255,255,.2)}
+
+/* contact strip */
+.hstrip{position:relative;z-index:1;background:linear-gradient(135deg,rgba(255,255,255,.06) 0%,rgba(255,255,255,.025) 100%);border-top:1px solid rgba(255,255,255,.1);backdrop-filter:blur(24px) saturate(1.4);-webkit-backdrop-filter:blur(24px) saturate(1.4);padding:var(--s24) var(--s48)}
+@media(max-width:768px){.hstrip{padding:var(--s16) var(--s24)}}
+.hstrip-inner{max-width:1440px;margin:0 auto;display:flex;align-items:center;gap:0;flex-wrap:nowrap;overflow-x:auto}
+@media(max-width:768px){.hstrip-inner{gap:0;flex-wrap:wrap;row-gap:var(--s12)}}
+.hstrip-item{display:flex;align-items:center;gap:14px;padding:0 var(--s32);color:rgba(255,255,255,.5);transition:color .35s var(--ease),background .35s;cursor:pointer;text-decoration:none;position:relative;flex-shrink:0}
+.hstrip-item::after{content:'';position:absolute;right:0;top:50%;transform:translateY(-50%);height:28px;width:1px;background:linear-gradient(to bottom,transparent,rgba(255,255,255,.12),transparent)}
+.hstrip-item:last-of-type::after{display:none}
+.hstrip-item:hover{color:rgba(255,255,255,.95)}
+.hstrip-icon{width:38px;height:38px;border:1px solid rgba(255,255,255,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:rgba(255,255,255,.05);transition:border-color .35s,background .35s,box-shadow .35s}
+.hstrip-item:hover .hstrip-icon{border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.1)}
+.hstrip-icon svg{width:16px;height:16px;stroke:rgba(255,255,255,.5);transition:stroke .35s}
+.hstrip-item:hover .hstrip-icon svg{stroke:rgba(255,255,255,.9)}
+.hstrip-meta{display:flex;flex-direction:column;gap:3px}
+.hstrip-lbl{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.28);font-weight:500}
+.hstrip-val{font-size:13px;color:rgba(255,255,255,.65);font-weight:400;letter-spacing:.01em;transition:color .35s}
+.hstrip-item:hover .hstrip-val{color:var(--bone)}
+.hstrip-cta{margin-left:auto;flex-shrink:0;display:inline-flex;align-items:center;gap:10px;padding:13px 30px;background:var(--bone);border:1px solid var(--bone);border-radius:var(--rpill);font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--void);transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .25s}
+.hstrip-cta:hover{background:rgba(255,255,255,.88);transform:translateY(-2px) scale(1.02);box-shadow:0 8px 32px rgba(0,0,0,.45)}
+.hstrip-cta:active{transform:translateY(0) scale(.98);transition-duration:.1s}
+@media(max-width:900px){.hstrip-item{padding:0 var(--s16)}.hstrip-cta{padding:10px 20px}}
+
+/* ── SCROLL REVEAL ── */
+.sr{opacity:0;transform:translateY(28px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+.sr.in{opacity:1;transform:translateY(0)}
+.sr-left{opacity:0;transform:translateX(-32px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.sr-left.in{opacity:1;transform:translateX(0)}
+.sr-scale{opacity:0;transform:scale(.96);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.sr-scale.in{opacity:1;transform:scale(1)}
+.hero-r{opacity:0;transform:translateY(32px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.hero-r.in{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.05s}.d2{transition-delay:.13s}.d3{transition-delay:.22s}.d4{transition-delay:.31s}.d5{transition-delay:.4s}.d6{transition-delay:.49s}
+
+/* ── MARQUEE ── */
+.mq{padding:var(--s32) 0;overflow:hidden;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05)}
+.mqt{display:flex;gap:var(--s48);animation:mq 40s linear infinite;white-space:nowrap}
+.mqi{font-family:var(--fd);font-size:15px;font-weight:300;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.17);flex-shrink:0}
+.mqs{color:rgba(255,255,255,.1);margin:0 var(--s16)}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── SERVICES ── */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s24);margin-top:var(--s64)}
+@media(max-width:1024px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.svc-grid{grid-template-columns:1fr}}
+.svc-card{background:var(--panel);border-radius:32px;overflow:hidden;cursor:pointer;transition:transform .4s var(--ease),box-shadow .4s}
+.svc-card:hover{transform:translateY(-6px);box-shadow:0 28px 70px rgba(0,0,0,.6)}
+.svc-img-wrap{position:relative;overflow:hidden;aspect-ratio:16/9}
+.svc-img-wrap img{width:100%;height:100%;object-fit:cover;opacity:.6;transition:opacity .5s,transform .7s var(--ease)}
+.svc-card:hover .svc-img-wrap img{opacity:.85;transform:scale(1.06)}
+.svc-body{padding:var(--s32)}
+.svc-num{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:var(--s12)}
+.svc-name{font-family:var(--fd);font-size:clamp(22px,2.5vw,30px);font-weight:300;letter-spacing:-.01em;line-height:1.05;margin-bottom:var(--s12)}
+.svc-desc{font-size:14px;line-height:1.75;color:rgba(255,255,255,.42)}
+.svc-more{max-height:0;overflow:hidden;transition:max-height .55s var(--ease)}
+.svc-card.open .svc-more{max-height:220px}
+.svc-more-inner{padding-top:var(--s16);border-top:1px solid rgba(255,255,255,.08);margin-top:var(--s16)}
+.svc-more-inner li{font-size:13px;color:rgba(255,255,255,.4);padding:4px 0 4px var(--s16);position:relative;list-style:none}
+.svc-more-inner li::before{content:'→';position:absolute;left:0;color:rgba(255,255,255,.2)}
+.svc-expand{display:flex;align-items:center;gap:8px;margin-top:var(--s16);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);transition:color .2s}
+.svc-card:hover .svc-expand{color:rgba(255,255,255,.6)}
+.svc-arrow{transition:transform .4s var(--ease);display:inline-block}
+.svc-card.open .svc-arrow{transform:rotate(45deg)}
+
+/* ── STATS ── */
+.sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.07);border-radius:24px;overflow:hidden;margin-top:var(--s96)}
+@media(max-width:900px){.sgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.sgrid{grid-template-columns:1fr}}
+.sitem{background:var(--void);padding:var(--s48) var(--s32);display:flex;flex-direction:column;gap:var(--s8)}
+.snum{font-family:var(--fd);font-size:clamp(52px,5.5vw,80px);font-weight:300;line-height:.85;letter-spacing:-.025em}
+.slbl{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:var(--s8)}
+
+/* ── PRODUCTS ── */
+.prod-tabs{display:flex;gap:var(--s8);margin-bottom:var(--s48);flex-wrap:wrap}
+.prod-tab{padding:10px 24px;border:1px solid rgba(255,255,255,.13);border-radius:var(--rpill);font-size:13px;letter-spacing:.06em;cursor:pointer;transition:all .25s;color:rgba(255,255,255,.5);background:transparent;font-family:var(--fb)}
+.prod-tab.active,.prod-tab:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.3);color:var(--bone)}
+.pcards{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s24)}
+@media(max-width:1024px){.pcards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.pcards{grid-template-columns:1fr}}
+.pcard{background:var(--panel);border-radius:32px;overflow:hidden;display:flex;flex-direction:column;transition:transform .4s var(--ease),box-shadow .4s}
+.pcard:hover{transform:translateY(-5px);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.pcard.hidden{display:none}
+.pcimg-wrap{overflow:hidden;aspect-ratio:16/10}
+.pcimg{width:100%;height:100%;object-fit:cover;opacity:.6;transition:opacity .4s,transform .7s var(--ease)}
+.pcard:hover .pcimg{opacity:.85;transform:scale(1.06)}
+.pcbody{padding:var(--s24) var(--s32);flex:1;display:flex;flex-direction:column;gap:var(--s12)}
+.pcnum{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.2)}
+.pctitle{font-family:var(--fd);font-size:clamp(22px,2.5vw,30px);font-weight:300;letter-spacing:-.01em;line-height:1}
+.pcdesc{font-size:14px;line-height:1.75;color:rgba(255,255,255,.42);flex:1}
+.pctags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+/* liquid card special CTA */
+.liq-trigger{display:inline-flex;align-items:center;gap:8px;margin-top:var(--s16);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--void);background:var(--bone);border:1px solid var(--bone);border-radius:var(--rpill);padding:8px 18px;transition:all .25s;cursor:pointer;font-family:var(--fb);font-weight:500}
+.liq-trigger:hover{background:rgba(255,255,255,.82);border-color:rgba(255,255,255,.82);transform:translateY(-1px)}
+
+/* ── LIQUID PROCESSING MODAL ── */
+.lq-overlay{position:fixed;inset:0;z-index:500;display:flex;align-items:flex-end;justify-content:center;pointer-events:none;opacity:0;transition:opacity .45s var(--ease)}
+.lq-overlay.open{opacity:1;pointer-events:all}
+.lq-bg{position:absolute;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(6px)}
+.lq-panel{position:relative;z-index:1;width:100%;max-width:1100px;max-height:90vh;background:var(--panel);border-radius:40px 40px 0 0;overflow:hidden;display:flex;flex-direction:column;transform:translateY(60px);transition:transform .55s var(--ease)}
+.lq-overlay.open .lq-panel{transform:translateY(0)}
+@media(max-width:768px){.lq-panel{max-height:92vh;border-radius:28px 28px 0 0}}
+.lq-top{padding:var(--s32) var(--s48);border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s24);flex-shrink:0}
+@media(max-width:768px){.lq-top{padding:var(--s24)}}
+.lq-close{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:20px;color:var(--bone);transition:background .2s,transform .2s;flex-shrink:0;font-family:var(--fb)}
+.lq-close:hover{background:rgba(255,255,255,.15);transform:rotate(90deg)}
+.lq-tabs-row{padding:0 var(--s48);display:flex;gap:0;border-bottom:1px solid rgba(255,255,255,.08);flex-shrink:0;overflow-x:auto}
+@media(max-width:768px){.lq-tabs-row{padding:0 var(--s24)}}
+.lq-tab{padding:var(--s16) var(--s24);font-family:var(--fb);font-size:13px;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.35);background:transparent;border:none;border-bottom:2px solid transparent;cursor:pointer;transition:color .2s,border-color .2s;white-space:nowrap;margin-bottom:-1px}
+.lq-tab.act{color:var(--bone);border-bottom-color:var(--bone)}
+.lq-tab:hover{color:rgba(255,255,255,.7)}
+.lq-body{overflow-y:auto;flex:1}
+.lq-content{display:none;padding:var(--s48);gap:var(--s48);grid-template-columns:1fr 1fr;align-items:start}
+.lq-content.act{display:grid}
+@media(max-width:768px){.lq-content{grid-template-columns:1fr;padding:var(--s24)}}
+.lq-img-wrap{border-radius:24px;overflow:hidden;aspect-ratio:4/3;flex-shrink:0}
+.lq-img-wrap img{width:100%;height:100%;object-fit:cover;opacity:.65}
+.lq-text h3{font-family:var(--fd);font-size:clamp(28px,3vw,40px);font-weight:300;letter-spacing:-.015em;line-height:.95;margin-bottom:var(--s24)}
+.lq-text .lq-intro{font-size:15px;line-height:1.8;color:rgba(255,255,255,.55);margin-bottom:var(--s24)}
+.lq-bullets{display:flex;flex-direction:column;gap:var(--s12)}
+.lq-bullet{display:flex;gap:var(--s12);align-items:flex-start}
+.lq-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.3);flex-shrink:0;margin-top:8px}
+.lq-bullet p{font-size:15px;line-height:1.7;color:rgba(255,255,255,.5)}
+.lq-opts{margin-top:var(--s24);padding:var(--s24);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:16px}
+.lq-opts-title{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:var(--s16)}
+.lq-opts ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.lq-opts li{font-size:14px;color:rgba(255,255,255,.45);padding-left:var(--s16);position:relative}
+.lq-opts li::before{content:'·';position:absolute;left:0;color:rgba(255,255,255,.2)}
+
+/* ── INDUSTRIES ── */
+.igrid5{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--s16);margin-top:var(--s64)}
+@media(max-width:1024px){.igrid5{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.igrid5{grid-template-columns:repeat(2,1fr)}}
+.iitem{display:flex;flex-direction:column;gap:var(--s16);padding:var(--s32) var(--s24);border:1px solid rgba(255,255,255,.08);border-radius:24px;transition:border-color .3s,background .3s,transform .35s var(--ease)}
+.iitem:hover{border-color:rgba(255,255,255,.22);background:var(--panel);transform:translateY(-4px)}
+.iico{font-size:26px;opacity:.6;transition:opacity .3s}
+.iitem:hover .iico{opacity:.85}
+.iname{font-family:var(--fd);font-size:22px;font-weight:300;line-height:1.1;letter-spacing:-.01em}
+.idesc{font-size:13px;color:rgba(255,255,255,.32);line-height:1.6}
+
+/* ── ABOUT TEASER (inline) ── */
+.about-inline{display:grid;grid-template-columns:1fr 1fr;gap:var(--s96);align-items:center}
+@media(max-width:900px){.about-inline{grid-template-columns:1fr;gap:var(--s48)}}
+.ai-img{position:relative;border-radius:var(--r50);overflow:hidden;aspect-ratio:4/5}
+.ai-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.5) contrast(1.1);transition:filter .6s}
+.ai-img:hover img{filter:brightness(.65) contrast(1.05)}
+.ai-img::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.18)}
+.ai-badge{position:absolute;bottom:var(--s32);left:var(--s32);z-index:2;background:rgba(0,0,0,.65);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.15);border-radius:var(--rpill);padding:10px 22px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.ai-kv{display:grid;grid-template-columns:1fr 1fr;gap:var(--s24);margin-top:var(--s32)}
+.ai-k{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:6px}
+.ai-v{font-size:16px;color:rgba(255,255,255,.7)}
+
+/* ── PROCESS ── */
+.plist{margin-top:var(--s64);display:flex;flex-direction:column}
+.pitem{display:grid;grid-template-columns:72px 1fr 1fr;gap:var(--s32);align-items:flex-start;padding:var(--s32) 0;border-top:1px solid rgba(255,255,255,.07);position:relative;transition:background .2s}
+.pitem:last-child{border-bottom:1px solid rgba(255,255,255,.07)}
+.pitem .pbar{position:absolute;left:0;bottom:0;height:1px;width:0;background:rgba(255,255,255,.2);transition:width 1.4s var(--ease)}
+.pitem.in .pbar{width:100%}
+@media(max-width:768px){.pitem{grid-template-columns:44px 1fr}.pdesc{display:none}}
+.pnum{font-size:13px;letter-spacing:.08em;color:rgba(255,255,255,.2);padding-top:5px}
+.pname{font-family:var(--fd);font-size:clamp(24px,3vw,40px);font-weight:300;letter-spacing:-.015em;line-height:1}
+.pdesc{font-size:15px;line-height:1.75;color:rgba(255,255,255,.36);padding-top:5px}
+
+/* ── CTA BAND ── */
+.ctaband{background:var(--panel2);border-radius:var(--r50);padding:var(--s96) var(--s64);display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;overflow:hidden}
+@media(max-width:768px){.ctaband{padding:var(--s64) var(--s32);border-radius:32px}}
+.ctabg{position:absolute;inset:0;opacity:.07}
+.ctabg img{width:100%;height:100%;object-fit:cover}
+.ctacont{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:var(--s32)}
+
+/* ── CONTACT ── */
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s96)}
+@media(max-width:900px){.cgrid{grid-template-columns:1fr;gap:var(--s48)}}
+.citem{display:flex;flex-direction:column;gap:7px}
+.clbl{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.28)}
+.cval{font-size:16px;color:rgba(255,255,255,.72)}
+a.cval:hover{color:var(--bone)}
+.cinfo-grid{display:flex;flex-direction:column;gap:var(--s24)}
+.cphone-list,.cemail-list{display:flex;flex-direction:column;gap:6px}
+.cphone-list a,.cemail-list a{font-size:16px;color:rgba(255,255,255,.72);transition:color .2s;display:flex;align-items:center;gap:8px}
+.cphone-list a:hover,.cemail-list a:hover{color:var(--bone)}
+.cmap-btn{display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border:1px solid rgba(255,255,255,.2);border-radius:var(--rpill);font-size:13px;color:var(--bone);transition:all .25s;margin-top:var(--s8)}
+.cmap-btn:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.05)}
+.cform{display:flex;flex-direction:column;gap:var(--s16)}
+.fgrp{display:flex;flex-direction:column;gap:9px}
+.flbl{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+.fi,.fta{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:16px 22px;font-family:var(--fb);font-size:16px;color:var(--bone);width:100%;outline:none;transition:border-color .25s,background .25s}
+.fi::placeholder,.fta::placeholder{color:rgba(255,255,255,.18)}
+.fi:focus,.fta:focus{border-color:rgba(255,255,255,.32);background:rgba(255,255,255,.07)}
+.fta{min-height:150px;resize:vertical}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:var(--s16)}
+@media(max-width:480px){.frow{grid-template-columns:1fr}}
+.socials{display:flex;gap:var(--s12)}
+.soc{width:40px;height:40px;border:1px solid rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.38);font-size:13px;font-weight:500;transition:all .25s}
+.soc:hover{border-color:rgba(255,255,255,.4);color:var(--bone);transform:translateY(-2px)}
+.dpanel{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:var(--s24)}
+
+/* ── FOOTER ── */
+footer{padding:var(--s96) 0 var(--s48);border-top:1px solid rgba(255,255,255,.06)}
+.ftop{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:var(--s48);margin-bottom:var(--s64)}
+@media(max-width:900px){.ftop{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.ftop{grid-template-columns:1fr}}
+.flogo{font-size:13px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;margin-bottom:var(--s16)}
+.ftag{font-family:var(--fd);font-size:24px;font-weight:300;line-height:1.2;letter-spacing:-.01em;color:rgba(255,255,255,.42)}
+.fctitle{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:var(--s16)}
+.flinks{list-style:none;display:flex;flex-direction:column;gap:11px}
+.flinks a{font-size:15px;color:rgba(255,255,255,.42);transition:color .2s}
+.flinks a:hover{color:var(--bone)}
+.fbot{display:flex;justify-content:space-between;align-items:center;padding-top:var(--s32);border-top:1px solid rgba(255,255,255,.05)}
+@media(max-width:600px){.fbot{flex-direction:column;gap:var(--s16);text-align:center}}
+.fbot p{font-size:13px;color:rgba(255,255,255,.2)}
+
+/* page transition out */
+body.leaving{opacity:0;transition:opacity .3s var(--ease2)}
+
+/* ══════════════════════════════════════
+   FLASHIER TRANSITIONS, PREMIUM LAYER
+══════════════════════════════════════ */
+:root{--spring:cubic-bezier(.34,1.56,.64,1);--slide:cubic-bezier(.22,1,.36,1)}
+
+/* ── Scroll progress bar ── */
+.sprogbar{position:fixed;top:0;left:0;right:0;z-index:999;height:1.5px;transform-origin:left;transform:scaleX(0);pointer-events:none;background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.08) 15%,rgba(255,255,255,.55) 50%,rgba(255,255,255,.08) 85%,transparent 100%)}
+
+/* ── Enhanced hero blur reveal ── */
+.hero-r{filter:blur(8px);transition:opacity .95s var(--ease),transform .95s var(--ease),filter .9s var(--ease)}
+.hero-r.in{opacity:1;transform:translateY(0);filter:blur(0)}
+
+/* ── Heading line-reveal ── */
+.lrev{overflow:hidden;display:block;line-height:inherit}
+.lrev span{display:block;transform:translateY(108%);transition:transform .95s var(--ease)}
+.lrev span.in{transform:translateY(0)}
+
+/* ── Stagger for grid children ── */
+.sr-g{opacity:0;transform:translateY(36px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.sr-g.in{opacity:1;transform:translateY(0)}
+
+/* ── Card position (shimmer removed) ── */
+.pcard,.svc-card{position:relative;isolation:isolate}
+
+/* ── Service card image clip-path wipe ── */
+.svc-img-wrap img{clip-path:inset(0 100% 0 0);transition:clip-path 1.15s var(--ease),opacity .5s,transform .7s var(--ease)}
+.svc-card.img-rdy .svc-img-wrap img{clip-path:inset(0 0% 0 0)}
+
+/* ── Process items entrance ── */
+.pitem{opacity:0;transform:translateX(-24px);transition:opacity .65s var(--ease),transform .65s var(--ease),background .2s}
+.pitem.in{opacity:1;transform:translateX(0)}
+
+/* ── Tab switch fade ── */
+.pcards{transition:opacity .22s ease,transform .22s var(--ease)}
+.pcards.tswitch{opacity:0;transform:translateY(10px);pointer-events:none}
+
+/* ── Marquee edge fade ── */
+.mq{mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent)}
+
+/* ── Nav entrance stagger ── */
+@keyframes nlin{from{opacity:0;transform:translateY(-9px)}to{opacity:1;transform:translateY(0)}}
+.nlinks li{opacity:0;animation:nlin .55s var(--ease) both}
+.nlinks li:nth-child(1){animation-delay:.18s}
+.nlinks li:nth-child(2){animation-delay:.25s}
+.nlinks li:nth-child(3){animation-delay:.32s}
+.nlinks li:nth-child(4){animation-delay:.39s}
+.nlinks li:nth-child(5){animation-delay:.46s}
+.nlinks li:nth-child(6){animation-delay:.53s}
+.nlinks li:nth-child(7){animation-delay:.60s}
+
+/* ── Footer link animated underline ── */
+.flinks a{background:linear-gradient(to right,rgba(255,255,255,.4),rgba(255,255,255,.4)) no-repeat 0 100%/0% 1px;transition:color .2s,background-size .35s var(--ease)}
+.flinks a:hover{color:var(--bone);background-size:100% 1px}
+
+/* ── Hover enlarge: cards ── */
+.pcard:hover{transform:translateY(-5px) scale(1.02)}
+.svc-card:hover{transform:translateY(-6px) scale(1.02)}
+.iitem:hover{transform:translateY(-4px) scale(1.03)}
+
+/* ── Hover enlarge: buttons ── */
+.btnp:hover{transform:translateY(-2px) scale(1.04)}
+.btng:hover{transform:translateY(-2px) scale(1.04)}
+.ncta:hover{transform:translateY(-2px) scale(1.04)}
+.liq-trigger:hover{transform:translateY(-1px) scale(1.04)}
+.lq-close:hover{transform:rotate(90deg) scale(1.1)}
+.soc:hover{transform:translateY(-2px) scale(1.1)}
+.cmap-btn:hover{transform:translateY(-2px) scale(1.02)}
+
+/* ── Hover enlarge: pills and tags ── */
+.pill{transition:transform .2s var(--ease),border-color .2s,color .2s}
+.pill:hover{transform:scale(1.06);border-color:rgba(255,255,255,.3);color:rgba(255,255,255,.75)}
+.tag{transition:transform .2s var(--ease),border-color .2s,color .2s}
+.tag:hover{transform:scale(1.06);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.65)}
+.prod-tab{transition:all .25s var(--ease),transform .2s var(--ease)}
+.prod-tab:hover{transform:scale(1.05)}
+.prod-tab.active{transform:scale(1.05)}
+.lq-tab:hover{transform:scale(1.04)}
+
+/* ── Scale press feedback ── */
+.btnp:active{transform:translateY(0) scale(.97)!important;transition-duration:.08s!important}
+.btng:active{transform:translateY(0) scale(.97)!important;transition-duration:.08s!important}
+.pcard:active{transform:translateY(-2px) scale(.98)!important}
+.svc-card:active{transform:translateY(-3px) scale(.98)!important}
+.pill:active,.tag:active,.prod-tab:active{transform:scale(.97)!important;transition-duration:.08s!important}
+
+/* ── Stat number shimmer ── */
+@keyframes numflash{0%{color:rgba(255,255,255,.6)}60%{color:#fff}100%{color:inherit}}
+.snum.flash{animation:numflash .9s var(--ease) forwards}
+
+/* ── Reduced motion ── */
+@media(prefers-reduced-motion:reduce){
+  .sprogbar,.pcard::before,.svc-card::before,.btnp::after{display:none!important}
+  .hero-r,.sr-g,.pitem{filter:none!important;transition:opacity .2s,transform .2s!important}
+  .svc-img-wrap img{clip-path:inset(0 0% 0 0)!important;transition:opacity .3s,transform .3s!important}
+  .nlinks li{animation:none!important;opacity:1!important}
+  .lrev span{transform:none!important;transition:none!important}
+  .pcards{transition:none!important}
+  .flinks a{background:none!important}
+  body::before{display:none!important}
+}
+
+/* ══════════════════════════════════════
+   QUALITY LAYER
+══════════════════════════════════════ */
+
+/* ── Noise grain overlay (adds premium depth to flat black) ── */
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.028;pointer-events:none;z-index:9998}
+
+/* ── Text-wrap balance on all display headings ── */
+.hd,.disp,.sh{text-wrap:balance}
+
+/* ── Keyboard focus visible ── */
+:focus-visible{outline:1.5px solid rgba(255,255,255,.38);outline-offset:3px;border-radius:4px}
+
+/* ── Hero ambient glow — soft radial light behind headline ── */
+.hcont::before{content:'';position:absolute;bottom:0;left:0;right:0;height:60%;background:radial-gradient(ellipse 75% 50% at 20% 92%,rgba(255,255,255,.05) 0%,transparent 65%);pointer-events:none;z-index:0}
+
+/* ── Stat numbers glow ── */
+.snum{text-shadow:0 0 48px rgba(255,255,255,.08)}
+
+/* ── Industries: SVG icon container ── */
+.iico{width:32px;height:32px;opacity:.55;transition:opacity .3s;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.iitem:hover .iico{opacity:.9}
+.iico svg{width:100%;height:100%}
+
+/* ── Contact icon alignment ── */
+.cval-row{display:flex;align-items:center;gap:9px}
+.cval-row svg{flex-shrink:0;opacity:.6}
+
+/* ── CTA band: make background texture more visible ── */
+.ctabg{opacity:.14!important}
+
+/* ── Improved card hover — add glow shadow ── */
+.pcard:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 0 0 1px rgba(255,255,255,.05),0 24px 60px rgba(0,0,0,.65)}
+.svc-card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 0 0 1px rgba(255,255,255,.06),0 28px 70px rgba(0,0,0,.7)}
+.iitem:hover{border-color:rgba(255,255,255,.22);background:var(--panel);transform:translateY(-4px) scale(1.03);box-shadow:0 0 0 1px rgba(255,255,255,.05),0 18px 40px rgba(0,0,0,.5)}
+
+/* ── Stat flash glow on count ── */
+@keyframes statglow{0%{text-shadow:0 0 48px rgba(255,255,255,.08)}50%{text-shadow:0 0 32px rgba(255,255,255,.35),0 0 64px rgba(255,255,255,.12)}100%{text-shadow:0 0 48px rgba(255,255,255,.08)}}
+.snum.flash{animation:numflash .9s var(--ease) forwards,statglow 1.2s var(--ease) forwards}
+
+/* ══════════════════════════════════════
+   MOBILE OPTIMISATION (≤480px)
+══════════════════════════════════════ */
+@media(max-width:480px){
+  /* Scale down display type on phones */
+  :root{
+    --dp:clamp(52px,13vw,80px);
+    --hd:clamp(36px,9vw,52px);
+    --sh:clamp(26px,7vw,36px);
+  }
+
+  /* Tighter section rhythm */
+  .sec{padding:72px 0}
+  .shdr{margin-bottom:var(--s32)}
+
+  /* Hero */
+  .hcont{padding:88px var(--s20,20px) var(--s24)}
+  .hmeta{gap:8px;margin-bottom:var(--s32)}
+  .scr{margin-top:var(--s32)}
+  .hgrid{gap:var(--s24)}
+
+  /* Contact strip: horizontal scroll on mobile, no wrap */
+  .hstrip{padding:0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .hstrip-inner{flex-wrap:nowrap;padding:var(--s16) var(--s24);width:max-content;min-width:100%}
+  .hstrip-item{padding:0 var(--s20,20px);flex-shrink:0}
+  /* Hide address on mobile — too wide */
+  .hstrip-item:nth-child(4){display:none}
+  .hstrip-cta{margin-left:var(--s20,20px);flex-shrink:0}
+
+  /* Nav */
+  nav{height:60px;padding:0 var(--s20,20px)}
+  .nlogo img{height:42px}
+  .ncta{display:none} /* hide desktop CTA — menu has contact link */
+
+  /* Mobile menu links bigger tap targets */
+  .mobmenu{gap:var(--s16)}
+  .mobmenu a{font-size:clamp(30px,9vw,48px)}
+
+  /* Service cards */
+  .svc-body{padding:var(--s24)}
+  .svc-grid{gap:var(--s16);margin-top:var(--s32)}
+
+  /* Stats: padding reduction on phone */
+  .sitem{padding:var(--s32) var(--s24)}
+  .sgrid{margin-top:var(--s48)}
+
+  /* Products */
+  .prod-tabs{gap:6px}
+  .prod-tab{padding:8px 16px;font-size:12px}
+  .pcbody{padding:var(--s20,20px) var(--s24)}
+  .pcards{gap:var(--s16)}
+
+  /* Industries */
+  .iitem{padding:var(--s24) var(--s20,20px);gap:var(--s12)}
+  .igrid5{gap:var(--s12);margin-top:var(--s32)}
+
+  /* About inline */
+  .ai-img{border-radius:28px;aspect-ratio:3/2}
+  .ai-kv{grid-template-columns:1fr 1fr;gap:var(--s16)}
+  .ai-badge{bottom:var(--s16);left:var(--s16);font-size:10px;padding:8px 16px}
+
+  /* Process */
+  .plist{margin-top:var(--s32)}
+  .pitem{padding:var(--s20,20px) 0;gap:var(--s16)}
+  .pnum{font-size:12px}
+
+  /* CTA band */
+  .ctaband{padding:var(--s48) var(--s24);border-radius:24px}
+  .ctacont{gap:var(--s24)}
+
+  /* Contact */
+  .cinfo-grid{gap:var(--s20,20px)}
+  .citem{gap:5px}
+  .cval{font-size:15px}
+  .fi,.fta{padding:14px 18px;font-size:15px;border-radius:12px}
+  .fta{min-height:120px}
+  .dpanel{padding:var(--s20,20px)}
+
+  /* Buttons: full width on smallest screens */
+  .bgrp{flex-direction:column;align-items:stretch}
+  .bgrp .btnp,.bgrp .btng{justify-content:center;padding:16px 24px}
+
+  /* Footer */
+  footer{padding:var(--s64) 0 var(--s32)}
+  .ftop{gap:var(--s32)}
+  .ftag{font-size:20px}
+
+  /* Disable hover scale transforms on touch — prevent sticky states */
+  .pcard:hover,.svc-card:hover,.iitem:hover{transform:none;box-shadow:none}
+  .btnp:hover,.btng:hover{transform:none}
+  .pill:hover,.tag:hover,.prod-tab:hover{transform:none}
+
+  /* Liquid modal */
+  .lq-panel{border-radius:20px 20px 0 0}
+  .lq-top{padding:var(--s20,20px)}
+  .lq-content{padding:var(--s20,20px);gap:var(--s24)}
+  .lq-tab{padding:var(--s12) var(--s16);font-size:12px}
+}
+
+/* Fine-tune 375px and below */
+@media(max-width:375px){
+  :root{--dp:clamp(46px,12vw,72px)}
+  .wrap{padding:0 var(--s16)}
+  .hstrip-item:nth-child(3){display:none} /* hide email on very small phones */
+}
+
+/* ── Stats cell hover ── */
+.sitem{transition:background .3s var(--ease),transform .35s var(--ease),box-shadow .35s}
+.sitem:hover{background:rgba(255,255,255,.022);transform:translateY(-4px);box-shadow:0 0 0 1px rgba(255,255,255,.04),0 16px 40px rgba(0,0,0,.4)}
+
+/* ── Process row hover ── */
+.pitem:hover{background:rgba(255,255,255,.02)}
+
+/* ── About-teaser image subtle lift ── */
+.ai-img{transition:transform .5s var(--ease)}
+.ai-img:hover{transform:scale(1.015)}
+</style>
+</head>
+<body>
+
+
+<!-- ─────────────────────────────────────────
+     LIQUID PROCESSING MODAL
+───────────────────────────────────────── -->
+<div id="lqModal" class="lq-overlay" role="dialog" aria-modal="true" aria-label="Liquid Processing Plant Details">
+  <div class="lq-bg" onclick="closeLiq()"></div>
+  <div class="lq-panel">
+    <div class="lq-top">
+      <div>
+        <div class="ey" style="margin-bottom:var(--s12)"><div class="eline"></div><span class="etxt">Liquid Processing Plant</span></div>
+        <h2 class="hd" style="font-size:clamp(28px,4vw,48px)">Complete Liquid<br/>Processing Solutions</h2>
+      </div>
+      <button class="lq-close" onclick="closeLiq()" aria-label="Close">×</button>
+    </div>
+    <div class="lq-tabs-row">
+      <button class="lq-tab act" onclick="switchLqTab(this,'milk')">Milk Processing</button>
+      <button class="lq-tab" onclick="switchLqTab(this,'cream')">Buttermilk &amp; Cream</button>
+      <button class="lq-tab" onclick="switchLqTab(this,'whey')">Whey Processing</button>
+    </div>
+    <div class="lq-body">
+
+      <!-- MILK -->
+      <div class="lq-content act" id="lq-milk">
+        <div class="lq-img-wrap">
+          <img src="images/milk-processing.jpg" alt="Milk processing plant stainless steel tanks"/>
+        </div>
+        <div class="lq-text">
+          <h3>Milk Processing Plant</h3>
+          <div class="lq-bullets">
+            <div class="lq-bullet"><div class="lq-dot"></div><p>Since 1995, Satnam Company has been producing and installing milk processing equipment, building an unmatched depth of expertise in the dairy sector.</p></div>
+            <div class="lq-bullet"><div class="lq-dot"></div><p>We understand the crucial elements: temperature control, product agitation, seamless delivery, and capacity, that define the success of a milk processing operation.</p></div>
+            <div class="lq-bullet"><div class="lq-dot"></div><p>The success of your final products relies on us executing our role correctly, and we are fully committed to delivering on that responsibility every time.</p></div>
+            <div class="lq-bullet"><div class="lq-dot"></div><p>Effortlessly transferring product within the tank and progressing to the next production phase is simplified with Satnam's (PEL) agitators and process piping solutions.</p></div>
+            <div class="lq-bullet"><div class="lq-dot"></div><p>Our customized agitation options are designed to suit your specific requirements. Our installation team is adept at overcoming any space or connection challenges, ensuring a smooth and uninterrupted process.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CREAM / BUTTERMILK -->
+      <div class="lq-content" id="lq-cream">
+        <div class="lq-img-wrap">
+          <img src="images/cream-buttermilk-processing.png" alt="Cream and buttermilk processing equipment"/>
+        </div>
+        <div class="lq-text">
+          <h3>Buttermilk / Cream Processing Plant</h3>
+          <div class="lq-bullets">
+            <div class="lq-bullet"><div class="lq-dot"></div><p>Whether you're producing ice cream, butter, sour cream, buttermilk, or a variety of other delectable food items, the stability and high quality of the cream base are essential for your end product.</p></div>
+            <div class="lq-bullet"><div class="lq-dot"></div><p>Our equipment for cream and dairy storage and processing is tailored to suit your particular cream/buttermilk applications, with no compromise on performance or hygiene.</p></div>
+            <div class="lq-bullet"><div class="lq-dot"></div><p>In the engineering and manufacturing process, we carefully consider agitation requirements, temperature needs, and flow demands to ensure the equipment meets your exact specifications.</p></div>
+            <div class="lq-bullet"><div class="lq-dot"></div><p>Our meticulous attention to detail ensures that each weld is expertly polished according to your finish specifications.</p></div>
+            <div class="lq-bullet"><div class="lq-dot"></div><p>Every valve and outlet is securely and thoughtfully installed, and each sheet of steel and heat transfer material is meticulously positioned and welded.</p></div>
+            <div class="lq-bullet"><div class="lq-dot"></div><p>This commitment to precision guarantees equipment that is built to last a lifetime.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WHEY -->
+      <div class="lq-content" id="lq-whey">
+        <div class="lq-img-wrap">
+          <img src="images/whey-processing.webp" alt="Whey processing crystallizer tanks"/>
+        </div>
+        <div class="lq-text">
+          <h3>Whey Processing Plant</h3>
+          <p class="lq-intro">The cheese making process extends beyond just cheese. Whey, a valuable by-product, is exceptionally rich in protein, vitamins, and minerals. To maximize the potential of your whey, having the appropriate equipment for heating, cooling, drying, and mixing is essential.</p>
+          <div class="lq-bullets">
+            <div class="lq-bullet"><div class="lq-dot"></div><p>With inclusive services encompassing delivery, installation, and startup, your whey products will swiftly commence production, adding significant value to the process.</p></div>
+            <div class="lq-bullet"><div class="lq-dot"></div><p>Satnam's (PEL) whey crystallizer tanks play a crucial role in converting whey into valuable products. Engineered for optimal efficiency, these crystallizers excel in both cooling and continuous agitation, two essential factors for successful crystallization.</p></div>
+          </div>
+          <div class="lq-opts">
+            <div class="lq-opts-title">Available Options</div>
+            <ul>
+              <li>Stainless steel exterior and legs</li>
+              <li>Extended alcove with extra insulation</li>
+              <li>Ladder with safety cage and guardrail</li>
+              <li>Recording thermometer</li>
+              <li>Liquid level gauge connection for continuous fluid monitoring</li>
+              <li>Customized agitation solutions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /lq-body -->
+  </div><!-- /lq-panel -->
+</div>
+
+<!-- ─────────────────────────────────────────
+     MOBILE MENU
+───────────────────────────────────────── -->
+<div class="mobmenu" id="mobmenu">
+  <a href="#top" onclick="event.preventDefault();closeMob();window.scrollTo({top:0,behavior:'smooth'})">Home</a>
+  <a href="#services" onclick="closeMob()">Services</a>
+  <a href="#products" onclick="closeMob()">Products</a>
+  <a href="#industries" onclick="closeMob()">Industries</a>
+  <a href="about.html" onclick="goTo(event,'about.html')">About</a>
+  <a href="#contact" onclick="closeMob()">Contact</a>
+  <div class="mob-divider"></div>
+  <div class="mob-contact">
+    <a href="tel:+16479621397">+1 (647) 962-1397</a>
+    <a href="mailto:info@pel13.com">info@pel13.com</a>
+  </div>
+</div>
+
+<!-- ─────────────────────────────────────────
+     NAV
+───────────────────────────────────────── -->
+<nav id="nav">
+  <a href="#top" class="nlogo" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})"><img src="images/pel-logo.png" alt="Perfect Engineering"/></a>
+  <ul class="nlinks">
+    <li><a href="#top" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#industries">Industries</a></li>
+    <li><a href="#about-inline">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="about.html" class="page-link" onclick="goTo(event,'about.html')">Full Story ↗</a></li>
+    <li><a href="portfolio.html" class="page-link" onclick="goTo(event,'portfolio.html')">Portfolio ↗</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:var(--s16)">
+    <a href="#contact" class="ncta">Get in Touch</a>
+    <div class="nmob" id="hambtn" onclick="toggleMob()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- ─────────────────────────────────────────
+     HERO
+───────────────────────────────────────── -->
+<section class="hero">
+  <div class="hbg" id="hbg">
+    <video id="hbgimg" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+      <source src="images/hero-bg.mp4" type="video/mp4"/>
+    </video>
+  </div>
+  <div class="hcont">
+    <div class="hgrid">
+      <div>
+        <p class="htag hero-r d2">Precision Engineering · Process Solutions</p>
+        <h1 class="disp hero-r d3">Numberless<br/>Possibilities</h1>
+        <div class="scr hero-r d5">
+          <div class="sline"></div>
+          <span style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3)">Scroll to explore</span>
+        </div>
+      </div>
+      <div class="hright hero-r d4">
+        <span class="pill">300+ Projects</span>
+        <span class="pill">80+ Engineers</span>
+        <span class="pill">32+ Installations</span>
+        <span class="pill" style="background:var(--bone);color:var(--void);border-color:var(--bone);font-weight:500;letter-spacing:.12em">Metal Manufacturing</span>
+      </div>
+    </div>
+  </div>
+  <!-- Contact strip -->
+  <div class="hstrip hero-r d5">
+    <div class="hstrip-inner">
+      <a href="tel:+16479621397" class="hstrip-item">
+        <div class="hstrip-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+        </div>
+        <div class="hstrip-meta">
+          <span class="hstrip-lbl">Call Us</span>
+          <span class="hstrip-val">+1 (647) 962-1397</span>
+        </div>
+      </a>
+      <a href="tel:+16472845053" class="hstrip-item">
+        <div class="hstrip-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+        </div>
+        <div class="hstrip-meta">
+          <span class="hstrip-lbl">Sales</span>
+          <span class="hstrip-val">+1 (647) 284-5053</span>
+        </div>
+      </a>
+      <a href="mailto:info@pel13.com" class="hstrip-item">
+        <div class="hstrip-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+        </div>
+        <div class="hstrip-meta">
+          <span class="hstrip-lbl">Email</span>
+          <span class="hstrip-val">info@pel13.com</span>
+        </div>
+      </a>
+      <a href="https://maps.google.com/?q=74+Suburban+Ave,+Guelph,+ON+N1E+6B5,+Canada" target="_blank" rel="noopener" class="hstrip-item">
+        <div class="hstrip-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+        </div>
+        <div class="hstrip-meta">
+          <span class="hstrip-lbl">Visit Us</span>
+          <span class="hstrip-val">74 Suburban Ave, Guelph ON</span>
+        </div>
+      </a>
+      <a href="#contact" class="hstrip-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px"><path d="M6 12h12m0 0l-4-4m4 4l-4 4"/></svg>
+        Get in Touch
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq">
+  <div class="mqt">
+    <span class="mqi">Dairy Processing</span><span class="mqs">·</span>
+    <span class="mqi">Food Manufacturing</span><span class="mqs">·</span>
+    <span class="mqi">Beverage &amp; Brewery</span><span class="mqs">·</span>
+    <span class="mqi">Chemical Processing</span><span class="mqs">·</span>
+    <span class="mqi">Precision Fabrication</span><span class="mqs">·</span>
+    <span class="mqi">Turnkey Solutions</span><span class="mqs">·</span>
+    <span class="mqi">Process Engineering</span><span class="mqs">·</span>
+    <span class="mqi">Guelph, Ontario</span><span class="mqs">·</span>
+    <span class="mqi">Dairy Processing</span><span class="mqs">·</span>
+    <span class="mqi">Food Manufacturing</span><span class="mqs">·</span>
+    <span class="mqi">Beverage &amp; Brewery</span><span class="mqs">·</span>
+    <span class="mqi">Chemical Processing</span><span class="mqs">·</span>
+    <span class="mqi">Precision Fabrication</span><span class="mqs">·</span>
+    <span class="mqi">Turnkey Solutions</span><span class="mqs">·</span>
+    <span class="mqi">Process Engineering</span><span class="mqs">·</span>
+    <span class="mqi">Guelph, Ontario</span><span class="mqs">·</span>
+  </div>
+</div>
+
+<!-- ─────────────────────────────────────────
+     SERVICES
+───────────────────────────────────────── -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="shdr">
+      <div>
+        <div class="ey sr"><div class="eline"></div><span class="etxt">Our Services</span></div>
+        <h2 class="hd sr d1">From Concept<br/>to Commissioning</h2>
+      </div>
+      <div>
+        <p class="body sr d2">Every engagement begins with understanding your exact requirements. We apply our full-service capability to deliver solutions that exceed expectations, on time, on budget. Click any card to learn more.</p>
+        <div class="sr d3" style="margin-top:var(--s32)">
+          <a href="portfolio.html" class="btng" onclick="goTo(event,'portfolio.html')">View Portfolio →</a>
+        </div>
+      </div>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card sr d1" onclick="toggleSvc(this)">
+        <div class="svc-img-wrap"><img src="images/engineering-design.png" alt="Engineering and design workspace"/></div>
+        <div class="svc-body">
+          <div class="svc-num">01</div><div class="svc-name">Engineering &amp; Design</div>
+          <p class="svc-desc">Comprehensive process design, P&amp;IDs, and detailed fabrication drawings by our experienced engineering team.</p>
+          <div class="svc-more"><div class="svc-more-inner"><ul><li>Process design &amp; flow diagrams</li><li>P&amp;ID development</li><li>3D modelling &amp; layout planning</li><li>Regulatory compliance documentation</li></ul></div></div>
+          <div class="svc-expand">Expand <span class="svc-arrow">+</span></div>
+        </div>
+      </div>
+      <div class="svc-card sr d2" onclick="toggleSvc(this)">
+        <div class="svc-img-wrap"><img src="images/fabrication-welding.webp" alt="Stainless steel fabrication workshop"/></div>
+        <div class="svc-body">
+          <div class="svc-num">02</div><div class="svc-name">Fabrication</div>
+          <p class="svc-desc">Precision stainless steel fabrication to exacting tolerances, with full QA documentation and material traceability.</p>
+          <div class="svc-more"><div class="svc-more-inner"><ul><li>TIG/MIG welding to hygienic standards</li><li>Electropolishing &amp; surface finishing</li><li>Full material traceability certificates</li><li>In-house QA inspection at every stage</li></ul></div></div>
+          <div class="svc-expand">Expand <span class="svc-arrow">+</span></div>
+        </div>
+      </div>
+      <div class="svc-card sr d3" onclick="toggleSvc(this)">
+        <div class="svc-img-wrap"><img src="images/industrial-installation.webp" alt="On-site industrial installation"/></div>
+        <div class="svc-body">
+          <div class="svc-num">03</div><div class="svc-name">Installation</div>
+          <p class="svc-desc">Professional on-site installation and commissioning by our certified engineering teams, first time, every time.</p>
+          <div class="svc-more"><div class="svc-more-inner"><ul><li>Mechanical &amp; process pipework</li><li>Instrumentation &amp; controls wiring</li><li>Systematic commissioning &amp; FAT</li><li>Operator training &amp; handover</li></ul></div></div>
+          <div class="svc-expand">Expand <span class="svc-arrow">+</span></div>
+        </div>
+      </div>
+      <div class="svc-card sr d4" onclick="toggleSvc(this)">
+        <div class="svc-img-wrap"><img src="images/plant-revamp.png" alt="Plant revamping and upgrade"/></div>
+        <div class="svc-body">
+          <div class="svc-num">04</div><div class="svc-name">Revamping</div>
+          <p class="svc-desc">Upgrade and modernise existing processing plants to improve efficiency, capacity, and compliance without full replacement.</p>
+          <div class="svc-more"><div class="svc-more-inner"><ul><li>Plant audit &amp; gap analysis</li><li>Capacity optimisation studies</li><li>Equipment upgrade &amp; integration</li><li>Minimal production downtime planning</li></ul></div></div>
+          <div class="svc-expand">Expand <span class="svc-arrow">+</span></div>
+        </div>
+      </div>
+      <div class="svc-card sr d5" onclick="toggleSvc(this)">
+        <div class="svc-img-wrap"><img src="images/maintenance-cleaning.webp" alt="Maintenance technician on equipment"/></div>
+        <div class="svc-body">
+          <div class="svc-num">05</div><div class="svc-name">Maintenance</div>
+          <p class="svc-desc">Preventive and corrective maintenance programmes keeping your processing assets at peak performance year-round.</p>
+          <div class="svc-more"><div class="svc-more-inner"><ul><li>Scheduled preventive maintenance</li><li>Emergency breakdown response</li><li>Spare parts supply &amp; management</li><li>Performance reporting &amp; analytics</li></ul></div></div>
+          <div class="svc-expand">Expand <span class="svc-arrow">+</span></div>
+        </div>
+      </div>
+      <div class="svc-card sr d6" onclick="toggleSvc(this)">
+        <div class="svc-img-wrap"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=75" alt="Engineering consultancy meeting"/></div>
+        <div class="svc-body">
+          <div class="svc-num">06</div><div class="svc-name">Consultancy</div>
+          <p class="svc-desc">Expert advisory across process optimisation, plant layout, regulatory compliance, and technology selection.</p>
+          <div class="svc-more"><div class="svc-more-inner"><ul><li>Process feasibility studies</li><li>Plant layout &amp; flow optimisation</li><li>Regulatory &amp; compliance advisory</li><li>Technology &amp; supplier selection</li></ul></div></div>
+          <div class="svc-expand">Expand <span class="svc-arrow">+</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section style="padding:0 0 var(--s128)">
+  <div class="wrap">
+    <div class="sgrid sr">
+      <div class="sitem"><div class="snum" data-count="300" data-suffix="+">0</div><div class="slbl">Projects Delivered</div></div>
+      <div class="sitem"><div class="snum" data-count="32" data-suffix="+">0</div><div class="slbl">Equipment Installations</div></div>
+      <div class="sitem"><div class="snum" data-count="80" data-suffix="+">0</div><div class="slbl">Team Members</div></div>
+      <div class="sitem"><div class="snum" data-count="2">0</div><div class="slbl">Countries of Operation</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────
+     PRODUCTS
+───────────────────────────────────────── -->
+<section class="sec" id="products" style="background:var(--charcoal)">
+  <div class="wrap">
+    <div class="shdr">
+      <div>
+        <div class="ey sr"><div class="eline"></div><span class="etxt">Processing Plants &amp; Equipment</span></div>
+        <h2 class="hd sr d1">Complete Plant<br/>Solutions</h2>
+      </div>
+      <p class="body sr d2">Fully integrated processing plants from initial concept through to final commissioning, tailored precisely to each client's production requirements. Click <em style="color:rgba(255,255,255,.7)">Liquid Processing</em> to explore our detailed sub-plant offerings.</p>
+    </div>
+    <div class="prod-tabs sr">
+      <button class="prod-tab active" onclick="filterProd('all',this)">All</button>
+      <button class="prod-tab" onclick="filterProd('processing',this)">Processing Plants</button>
+      <button class="prod-tab" onclick="filterProd('equipment',this)">Equipment</button>
+    </div>
+    <div class="pcards">
+
+      <!-- LIQUID, special card with modal trigger -->
+      <div class="pcard sr d1" data-cat="processing">
+        <div class="pcimg-wrap"><img class="pcimg" src="images/milk-processing.jpg" alt="Liquid dairy processing plant"/></div>
+        <div class="pcbody">
+          <div class="pcnum">01 · Processing Plants</div>
+          <div class="pctitle">Liquid Processing</div>
+          <p class="pcdesc">Complete liquid handling systems for milk, buttermilk, cream, and whey, designed for maximum hygiene, efficiency, and throughput.</p>
+          <div class="pctags"><span class="tag">Milk</span><span class="tag">Buttermilk</span><span class="tag">Cream</span><span class="tag">Whey</span></div>
+          <button class="liq-trigger" onclick="openLiq(event)">Explore Sub-Plants →</button>
+        </div>
+      </div>
+
+      <div class="pcard sr d2" data-cat="processing">
+        <div class="pcimg-wrap"><img class="pcimg" src="images/powder-processing.webp" alt="Powder processing and spray drying"/></div>
+        <div class="pcbody">
+          <div class="pcnum">02 · Processing Plants</div>
+          <div class="pctitle">Powder Processing</div>
+          <p class="pcdesc">Precision powder production for milk powder, whey powder, yeast, and chemical dry products with controlled drying and packaging.</p>
+          <div class="pctags"><span class="tag">Milk Powder</span><span class="tag">Whey Powder</span><span class="tag">Yeast</span></div>
+        </div>
+      </div>
+      <div class="pcard sr d3" data-cat="processing">
+        <div class="pcimg-wrap"><img class="pcimg" src="images/beverage-processing.png" alt="Beverage and brewery processing"/></div>
+        <div class="pcbody">
+          <div class="pcnum">03 · Processing Plants</div>
+          <div class="pctitle">Beverage Processing</div>
+          <p class="pcdesc">High-performance manufacturing systems for beer, juice, and soft drinks, consistent quality at industrial scale.</p>
+          <div class="pctags"><span class="tag">Beer</span><span class="tag">Juice</span><span class="tag">Brewery</span></div>
+        </div>
+      </div>
+      <div class="pcard sr d4" data-cat="processing">
+        <div class="pcimg-wrap"><img class="pcimg" src="images/food-processing.webp" alt="Food processing plant"/></div>
+        <div class="pcbody">
+          <div class="pcnum">04 · Processing Plants</div>
+          <div class="pctitle">Food Processing</div>
+          <p class="pcdesc">Specialist food manufacturing for chocolate, ghee, paneer, cheese, curd, and ice cream, engineered for hygiene and yield.</p>
+          <div class="pctags"><span class="tag">Chocolate</span><span class="tag">Cheese</span><span class="tag">Ice Cream</span><span class="tag">Ghee</span></div>
+        </div>
+      </div>
+      <div class="pcard sr d5" data-cat="processing">
+        <div class="pcimg-wrap"><img class="pcimg" src="images/chemical-processing.webp" alt="Chemical processing plant"/></div>
+        <div class="pcbody">
+          <div class="pcnum">05 · Processing Plants</div>
+          <div class="pctitle">Chemical Processing</div>
+          <p class="pcdesc">Robust stainless steel chemical process systems engineered to resist corrosion and meet the most stringent safety standards.</p>
+          <div class="pctags"><span class="tag">Industrial</span><span class="tag">Corrosion-Resistant</span><span class="tag">High-Purity</span></div>
+        </div>
+      </div>
+      <!-- Equipment -->
+      <div class="pcard sr d1" data-cat="equipment">
+        <div class="pcimg-wrap"><img class="pcimg" src="images/storage-tanks.webp" alt="Large stainless steel storage tanks"/></div>
+        <div class="pcbody">
+          <div class="pcnum">01 · Equipment</div>
+          <div class="pctitle">Tanks &amp; Silos</div>
+          <p class="pcdesc">High-capacity stainless steel storage and process tanks up to 300KL, with mirror-polished internal surfaces for maximum hygiene.</p>
+          <div class="pctags"><span class="tag">Up to 300KL</span><span class="tag">SS 304/316L</span><span class="tag">Custom</span></div>
+        </div>
+      </div>
+      <div class="pcard sr d2" data-cat="equipment">
+        <div class="pcimg-wrap"><img class="pcimg" src="images/pasteurizer-skid.png" alt="Pasteurizer skid assembly"/></div>
+        <div class="pcbody">
+          <div class="pcnum">02 · Equipment</div>
+          <div class="pctitle">Pasteurizer Skids</div>
+          <p class="pcdesc">Complete pasteurisation skid assemblies for milk, cream, and butter, integrated controls, heat recovery, and full compliance documentation.</p>
+          <div class="pctags"><span class="tag">Milk</span><span class="tag">Cream &amp; Butter</span><span class="tag">HTST/LTLT</span></div>
+        </div>
+      </div>
+      <div class="pcard sr d3" data-cat="equipment">
+        <div class="pcimg-wrap"><img class="pcimg" src="images/filtration-skid.webp" alt="Process and filtration skid"/></div>
+        <div class="pcbody">
+          <div class="pcnum">03 · Equipment</div>
+          <div class="pctitle">Process Skids &amp; Filtration</div>
+          <p class="pcdesc">Modular skid systems including CIP, Juice, NF/RO filtration, fully piped, instrumented, and factory-tested before delivery.</p>
+          <div class="pctags"><span class="tag">CIP Skids</span><span class="tag">NF / RO</span><span class="tag">Factory Tested</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────
+     INDUSTRIES, 5 (no Pharma)
+───────────────────────────────────────── -->
+<section class="sec" id="industries">
+  <div class="wrap">
+    <div class="shdr">
+      <div>
+        <div class="ey sr"><div class="eline"></div><span class="etxt">Industries Served</span></div>
+        <h2 class="hd sr d1">Five Industries.<br/>One Standard.</h2>
+      </div>
+      <p class="body sr d2">Our solutions serve the world's most demanding processing industries, where precision, hygiene, and reliability are non-negotiable requirements across every project we deliver.</p>
+    </div>
+    <div class="igrid5">
+      <div class="iitem sr d1"><div class="iico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C8.5 7.5 5 11 5 14.5a7 7 0 0014 0C19 11 15.5 7.5 12 2z"/></svg></div><div class="iname">Dairy</div><p class="idesc">Milk, cream, butter &amp; cheese production lines</p></div>
+      <div class="iitem sr d2"><div class="iico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg></div><div class="iname">Food</div><p class="idesc">Chocolate, ice cream &amp; specialty food processing</p></div>
+      <div class="iitem sr d3"><div class="iico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v8l-4.8 6.4A1 1 0 006 19h12a1 1 0 00.8-1.6L14 11V3"/><circle cx="9.5" cy="15.5" r="1" fill="currentColor" stroke="none"/></svg></div><div class="iname">Chemical</div><p class="idesc">Industrial chemicals &amp; high-purity process fluids</p></div>
+      <div class="iitem sr d4"><div class="iico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2h8l2 11H6L8 2z"/><path d="M6 13v9h12v-9"/><path d="M9.5 7h5"/></svg></div><div class="iname">Beverage</div><p class="idesc">Juice, water &amp; soft drink processing systems</p></div>
+      <div class="iitem sr d5"><div class="iico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="8" rx="8" ry="3"/><path d="M4 8v8c0 1.66 3.58 3 8 3s8-1.34 8-3V8"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/></svg></div><div class="iname">Brewery</div><p class="idesc">Beer fermentation, maturation &amp; packaging lines</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────
+     ABOUT US (inline, scrollable)
+───────────────────────────────────────── -->
+<section class="sec" id="about-inline" style="background:var(--charcoal)">
+  <div class="wrap">
+    <div class="about-inline">
+      <div class="ai-img sr-left">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80" alt="Perfect Engineering manufacturing facility"/>
+        <div class="ai-badge">Canada &amp; India · Est. 2023</div>
+      </div>
+      <div class="sr d2">
+        <div class="ey"><div class="eline"></div><span class="etxt">About Us</span></div>
+        <h2 class="hd" style="margin-bottom:var(--s32)">Built on<br/>Precision</h2>
+        <p class="body" style="margin-bottom:var(--s24)">Perfect Engineering Limited was founded with one ambition: to deliver precision-engineered stainless steel solutions that set a new benchmark for quality and reliability in process engineering.</p>
+        <p class="body" style="margin-bottom:var(--s24)">Based in Canada with manufacturing capability through our sister concern Satnam Process Engineering in India, we combine Canadian engineering rigour with Indian manufacturing depth, giving our clients the best of both worlds.</p>
+        <p class="body" style="margin-bottom:var(--s48)">With 80+ engineers and specialists, we bring decades of collective experience across dairy, food, pharmaceutical, beverage, chemical, and brewery sectors. We don't just build equipment. We build the infrastructure that powers industries.</p>
+        <div class="ai-kv">
+          <div><div class="ai-k">Headquarters</div><div class="ai-v">Guelph, Ontario, Canada</div></div>
+          <div><div class="ai-k">Manufacturing</div><div class="ai-v">Satnam Process Engineering, India</div></div>
+          <div><div class="ai-k">Founded</div><div class="ai-v">2023</div></div>
+          <div><div class="ai-k">Specialisation</div><div class="ai-v">Stainless Steel Process Equipment</div></div>
+        </div>
+        <div style="display:flex;gap:var(--s16);flex-wrap:wrap;margin-top:var(--s48)">
+          <a href="about.html" class="btnp" onclick="goTo(event,'about.html')">Our Full Story</a>
+          <a href="#contact" class="btng">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────
+     PROCESS
+───────────────────────────────────────── -->
+<section class="sec">
+  <div class="wrap">
+    <div class="shdr">
+      <div>
+        <div class="ey sr"><div class="eline"></div><span class="etxt">Our Process</span></div>
+        <h2 class="hd sr d1">How We Deliver</h2>
+      </div>
+      <p class="body sr d2">A structured, proven delivery methodology, from first brief through to final handover, without surprises.</p>
+    </div>
+    <div class="plist">
+      <div class="pitem sr"><div class="pbar"></div><div class="pnum">01</div><div class="pname">Discovery &amp; Brief</div><div class="pdesc">Deep understanding of your process requirements, capacity targets, regulatory environment, and site constraints.</div></div>
+      <div class="pitem sr"><div class="pbar"></div><div class="pnum">02</div><div class="pname">Design &amp; Engineering</div><div class="pdesc">Process designs, P&amp;IDs, and 3D models developed before a single piece of steel is cut. Every system engineered for hygiene, efficiency, and ease of maintenance.</div></div>
+      <div class="pitem sr"><div class="pbar"></div><div class="pnum">03</div><div class="pname">Precision Fabrication</div><div class="pdesc">Certified workshop fabrication with full material traceability and QA inspection at every stage. Surface finishes specified and verified.</div></div>
+      <div class="pitem sr"><div class="pbar"></div><div class="pnum">04</div><div class="pname">Factory Acceptance</div><div class="pdesc">Complete factory acceptance testing before despatch. You see the plant working before it leaves our facility.</div></div>
+      <div class="pitem sr"><div class="pbar"></div><div class="pnum">05</div><div class="pname">Installation &amp; Commissioning</div><div class="pdesc">Our site teams handle mechanical installation, process pipework, instrumentation, and electrical connections, systematically verified at every step.</div></div>
+      <div class="pitem sr"><div class="pbar"></div><div class="pnum">06</div><div class="pname">Handover &amp; Support</div><div class="pdesc">Formal handover with full documentation, operator training, and ongoing maintenance support. We remain your engineering partner long after commissioning.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section style="padding:0 var(--s48) var(--s96)">
+  <div class="ctaband sr-scale">
+    <div class="ctabg"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1400&q=55" alt=""/></div>
+    <div class="ctacont">
+      <div class="ey" style="justify-content:center"><div class="eline"></div><span class="etxt">Start a Project</span><div class="eline"></div></div>
+      <h2 class="hd" style="max-width:720px">Ready to Engineer<br/>Something Exceptional?</h2>
+      <p class="body" style="max-width:520px;text-align:center">Tell us about your processing requirements and our team will develop a solution tailored precisely to your needs.</p>
+      <div class="bgrp">
+        <a href="#contact" class="btnp">Contact Us Now</a>
+        <a href="about.html" class="btng" onclick="goTo(event,'about.html')">Learn About Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────
+     CONTACT
+───────────────────────────────────────── -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="shdr">
+      <div>
+        <div class="ey sr"><div class="eline"></div><span class="etxt">Contact</span></div>
+        <h2 class="hd sr d1">Let's Build<br/>Together</h2>
+      </div>
+      <p class="body sr d2">Whether you're planning a new plant, upgrading existing equipment, or looking for a trusted engineering partner, we're here to help.</p>
+    </div>
+    <div class="cgrid">
+      <!-- Contact Info -->
+      <div class="cinfo-grid sr">
+        <div class="citem">
+          <span class="clbl">Company</span>
+          <span class="cval">Perfect Engineering Limited (PEL)</span>
+        </div>
+        <div class="citem">
+          <span class="clbl">Address</span>
+          <a href="https://maps.google.com/?q=74+Suburban+Ave,+Guelph,+ON+N1E+6B5,+Canada" target="_blank" rel="noopener" class="cval" style="display:flex;flex-direction:column;gap:2px">
+            <span>74 Suburban Ave</span>
+            <span>Guelph, ON N1E 6B5, Canada</span>
+          </a>
+          <a href="https://maps.google.com/?q=74+Suburban+Ave,+Guelph,+ON+N1E+6B5,+Canada" target="_blank" rel="noopener" class="cmap-btn" style="margin-top:var(--s12)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Open in Google Maps
+          </a>
+        </div>
+        <div class="citem">
+          <span class="clbl">Phone</span>
+          <div class="cphone-list">
+            <a href="tel:+16479621397" class="cval cval-row"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .02h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg> +1 (647) 962-1397</a>
+            <a href="tel:+16472845053" class="cval cval-row"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .02h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg> +1 (647) 284-5053</a>
+            <a href="tel:+16478938397" class="cval cval-row"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .02h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg> +1 (647) 893-8397</a>
+          </div>
+        </div>
+        <div class="citem">
+          <span class="clbl">Email</span>
+          <div class="cemail-list">
+            <a href="mailto:info@pel13.com" class="cval cval-row"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg> info@pel13.com</a>
+            <a href="mailto:sukhjit@pel13.com" class="cval cval-row"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg> sukhjit@pel13.com</a>
+          </div>
+        </div>
+        <div>
+          <div class="clbl" style="margin-bottom:var(--s16)">Follow Us</div>
+          <div class="socials">
+            <a href="#" class="soc" aria-label="LinkedIn">in</a>
+            <a href="#" class="soc" aria-label="Facebook">f</a>
+            <a href="#" class="soc" aria-label="Twitter">𝕏</a>
+            <a href="#" class="soc" aria-label="Instagram">ig</a>
+            <a href="#" class="soc" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+        <div class="dpanel">
+          <div class="clbl" style="margin-bottom:var(--s16)">Sister Concern</div>
+          <p class="body" style="font-size:15px">Satnam Process Engineering, India. Our manufacturing partner with over 25 years of stainless steel fabrication expertise.</p>
+        </div>
+      </div>
+      <!-- Form -->
+      <form class="cform sr d2" id="cform">
+        <div class="frow">
+          <div class="fgrp"><label class="flbl" for="fn">First Name</label><input class="fi" type="text" id="fn" placeholder="John" required/></div>
+          <div class="fgrp"><label class="flbl" for="ln">Last Name</label><input class="fi" type="text" id="ln" placeholder="Smith" required/></div>
+        </div>
+        <div class="fgrp"><label class="flbl" for="em">Email Address</label><input class="fi" type="email" id="em" placeholder="john@company.com" required/></div>
+        <div class="fgrp"><label class="flbl" for="ph">Phone Number</label><input class="fi" type="tel" id="ph" placeholder="+1 (000) 000-0000"/></div>
+        <div class="fgrp"><label class="flbl" for="co">Company</label><input class="fi" type="text" id="co" placeholder="Your Company"/></div>
+        <div class="fgrp">
+          <label class="flbl" for="ind">Industry</label>
+          <select class="fi" id="ind" style="cursor:pointer;appearance:none;-webkit-appearance:none">
+            <option value="" style="background:#1e1e1e">Select your industry</option>
+            <option style="background:#1e1e1e">Dairy</option>
+            <option style="background:#1e1e1e">Food Processing</option>
+            <option style="background:#1e1e1e">Beverage</option>
+            <option style="background:#1e1e1e">Brewery</option>
+            <option style="background:#1e1e1e">Chemical</option>
+            <option style="background:#1e1e1e">Other</option>
+          </select>
+        </div>
+        <div class="fgrp"><label class="flbl" for="msg">Project Details</label><textarea class="fta" id="msg" placeholder="Tell us about your project: requirements, capacity needs, timeline..."></textarea></div>
+        <button id="sbtn" type="submit" class="btnp" style="width:100%;justify-content:center;cursor:pointer;font-family:var(--fb)">Send Inquiry →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="ftop">
+      <div>
+        <div class="flogo"><img src="images/pel-logo.png" alt="Perfect Engineering Ltd" style="height:44px;width:auto"/></div>
+        <div class="ftag">Numberless Possibilities.<br/>Extreme Efficiency.</div>
+        <p style="font-size:14px;color:rgba(255,255,255,.22);line-height:1.75;max-width:270px;margin-top:var(--s16)">74 Suburban Ave, Guelph ON N1E 6B5, Canada<br/>Precision stainless steel manufacturing, Canada &amp; India.</p>
+        <div style="margin-top:var(--s24);display:flex;flex-direction:column;gap:6px">
+          <a href="tel:+16479621397" style="font-size:13px;color:rgba(255,255,255,.35);transition:color .2s;display:flex;align-items:center;gap:7px" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.35)'"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .02h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg> +1 (647) 962-1397</a>
+          <a href="mailto:info@pel13.com" style="font-size:13px;color:rgba(255,255,255,.35);transition:color .2s;display:flex;align-items:center;gap:7px" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.35)'"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg> info@pel13.com</a>
+        </div>
+      </div>
+      <div>
+        <div class="fctitle">Products</div>
+        <ul class="flinks">
+          <li><a href="#products">Liquid Processing</a></li>
+          <li><a href="#products">Powder Processing</a></li>
+          <li><a href="#products">Beverage Processing</a></li>
+          <li><a href="#products">Food Processing</a></li>
+          <li><a href="#products">Tanks &amp; Silos</a></li>
+          <li><a href="#products">Pasteurizer Skids</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fctitle">Services</div>
+        <ul class="flinks">
+          <li><a href="#services">Engineering</a></li>
+          <li><a href="#services">Fabrication</a></li>
+          <li><a href="#services">Installation</a></li>
+          <li><a href="#services">Revamping</a></li>
+          <li><a href="#services">Maintenance</a></li>
+          <li><a href="#services">Consultancy</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fctitle">Company</div>
+        <ul class="flinks">
+          <li><a href="#about-inline">About Us</a></li>
+          <li><a href="about.html" onclick="goTo(event,'about.html')">Full Story</a></li>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://maps.google.com/?q=74+Suburban+Ave,+Guelph,+ON+N1E+6B5,+Canada" target="_blank">Get Directions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbot">
+      <p>© 2024 Perfect Engineering Limited. All rights reserved. · Guelph, Ontario, Canada</p>
+      <p style="color:rgba(255,255,255,.12)">perfectengltd.com</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ── PAGE TRANSITION ── */
+function goTo(e,url){
+  e.preventDefault();
+  document.body.classList.add('leaving');
+  setTimeout(()=>location.href=url,300);
+}
+
+/* ── NAV ── */
+const navEl=document.getElementById('nav');
+const sections=document.querySelectorAll('section[id]');
+const navLinks=document.querySelectorAll('.nlinks a');
+window.addEventListener('scroll',()=>{
+  navEl.classList.toggle('sc',scrollY>60);
+  let cur='';
+  sections.forEach(s=>{if(scrollY>=s.offsetTop-130)cur=s.id});
+  navLinks.forEach(a=>{
+    a.classList.remove('active');
+    const href=a.getAttribute('href');
+    if(href==='#'+cur)a.classList.add('active');
+  });
+},{passive:true});
+
+/* ── MOBILE MENU ── */
+let mobOpen=false;
+function toggleMob(){
+  mobOpen=!mobOpen;
+  document.getElementById('mobmenu').classList.toggle('open',mobOpen);
+  document.getElementById('hambtn').classList.toggle('open',mobOpen);
+  document.body.style.overflow=mobOpen?'hidden':'';
+}
+function closeMob(){
+  mobOpen=false;
+  document.getElementById('mobmenu').classList.remove('open');
+  document.getElementById('hambtn').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+/* ── HERO PARALLAX ── */
+const hbgimg=document.getElementById('hbgimg');
+window.addEventListener('scroll',()=>{
+  if(scrollY<window.innerHeight&&hbgimg)
+    hbgimg.style.transform=`translateY(${scrollY*0.28}px)`;
+},{passive:true});
+
+/* ── HERO VIDEO LOOP FADE ── */
+(function(){
+  const vid=document.getElementById('hbgimg');
+  if(!vid||vid.tagName!=='VIDEO')return;
+  const FADE=1.0;
+  let fading=false;
+  vid.addEventListener('timeupdate',()=>{
+    if(!vid.duration)return;
+    const remaining=vid.duration-vid.currentTime;
+    if(remaining<=FADE&&!fading){
+      fading=true;
+      vid.style.opacity='0';
+    }
+    if(vid.currentTime<FADE&&fading){
+      fading=false;
+      vid.style.opacity='1';
+    }
+  });
+})();
+
+/* ── HERO REVEAL ── */
+window.addEventListener('load',()=>{
+  document.querySelectorAll('.hero-r').forEach(el=>el.classList.add('in'));
+});
+
+/* ── SCROLL REVEAL ── */
+const srObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('in');
+      srObs.unobserve(e.target);
+    }
+  });
+},{threshold:.1,rootMargin:'0px 0px -48px 0px'});
+document.querySelectorAll('.sr,.sr-left,.sr-scale').forEach(el=>srObs.observe(el));
+
+/* ── STAT COUNTERS ── */
+const sgrid=document.querySelector('.sgrid');
+if(sgrid){
+  const co=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.querySelectorAll('[data-count]').forEach(el=>(window.animCount||animCount)(el));
+        co.unobserve(e.target);
+      }
+    });
+  },{threshold:.3});
+  co.observe(sgrid);
+}
+function animCount(el){
+  const target=+el.dataset.count,suffix=el.dataset.suffix||'';
+  const dur=1800,start=performance.now();
+  (function step(now){
+    const p=Math.min((now-start)/dur,1);
+    const ease=1-Math.pow(1-p,4);
+    el.textContent=Math.round(ease*target)+suffix;
+    if(p<1)requestAnimationFrame(step);
+  })(start);
+}
+
+/* ── PROCESS BARS ── */
+const pitemObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('in');pitemObs.unobserve(e.target);}
+  });
+},{threshold:.4});
+document.querySelectorAll('.pitem').forEach(el=>pitemObs.observe(el));
+
+/* ── SERVICE CARDS ── */
+function toggleSvc(card){
+  const isOpen=card.classList.contains('open');
+  document.querySelectorAll('.svc-card.open').forEach(c=>c.classList.remove('open'));
+  if(!isOpen)card.classList.add('open');
+}
+
+/* ── PRODUCT TABS ── */
+function filterProd(cat,btn){
+  document.querySelectorAll('.prod-tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.pcard').forEach(c=>{
+    const show=cat==='all'||c.dataset.cat===cat;
+    c.style.display=show?'flex':'none';
+  });
+}
+
+/* ── LIQUID MODAL ── */
+function openLiq(e){
+  e.stopPropagation();
+  const modal=document.getElementById('lqModal');
+  modal.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLiq(){
+  document.getElementById('lqModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+function switchLqTab(btn,tab){
+  document.querySelectorAll('.lq-tab').forEach(t=>t.classList.remove('act'));
+  btn.classList.add('act');
+  document.querySelectorAll('.lq-content').forEach(c=>c.classList.remove('act'));
+  document.getElementById('lq-'+tab).classList.add('act');
+}
+// close modal on Escape
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeLiq();closeMob();}});
+
+/* ══════════════════════════════════════
+   FLASHIER TRANSITIONS, JS LAYER
+══════════════════════════════════════ */
+
+/* ── Scroll progress bar ── */
+const progBar=document.createElement('div');
+progBar.className='sprogbar';
+document.body.prepend(progBar);
+window.addEventListener('scroll',()=>{
+  const pct=scrollY/(document.body.scrollHeight-innerHeight);
+  progBar.style.transform=`scaleX(${pct})`;
+},{passive:true});
+
+/* ── Heading line reveals ── */
+(function(){
+  // Target section headings only (not hero)
+  const sel='.sec .hd.sr, .sec .sh.sr, #about-inline .hd.sr';
+  document.querySelectorAll(sel).forEach(el=>{
+    const raw=el.innerHTML;
+    const lines=raw.split(/<br\s*\/?>/i);
+    el.innerHTML=lines.map(ln=>`<span class="lrev"><span>${ln.trim()}</span></span>`).join('');
+    // Detach from sr observer, handle here
+    el.classList.remove('sr'); // prevent srObs from double-triggering
+    el.classList.add('lrev-host');
+    el.style.opacity='1';
+    el.style.transform='none';
+    el.style.transition='none';
+  });
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting)return;
+      e.target.querySelectorAll('.lrev span').forEach((s,i)=>{
+        s.style.transitionDelay=(i*130)+'ms';
+        s.classList.add('in');
+      });
+      obs.unobserve(e.target);
+    });
+  },{threshold:.15});
+  document.querySelectorAll('.lrev-host').forEach(el=>obs.observe(el));
+})();
+
+/* ── Grid stagger reveals ── */
+function staggerGrid(containerSel,childSel,step,onEach){
+  step=step||60;
+  document.querySelectorAll(containerSel).forEach(wrap=>{
+    const kids=[...wrap.querySelectorAll(childSel)];
+    kids.forEach(k=>k.classList.add('sr-g'));
+    const obs=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(!e.isIntersecting)return;
+        kids.forEach((k,i)=>{
+          k.style.transitionDelay=(i*step)+'ms';
+          k.classList.add('in');
+          if(onEach)onEach(k,i,step);
+        });
+        obs.unobserve(wrap);
+      });
+    },{threshold:.06});
+    obs.observe(wrap);
+  });
+}
+staggerGrid('.svc-grid','.svc-card',70,function(card,i,step){
+  setTimeout(function(){card.classList.add('img-rdy');},i*step+160);
+});
+staggerGrid('.igrid5','.iitem',45);
+
+/* ── Product cards: initial stagger on load, re-stagger on tab switch ── */
+(function(){
+  const grid=document.querySelector('.pcards');
+  if(!grid)return;
+  const cards=[...grid.querySelectorAll('.pcard')];
+  cards.forEach(k=>k.classList.add('sr-g'));
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting)return;
+      cards.forEach((k,i)=>{
+        k.style.transitionDelay=(i*55)+'ms';
+        k.classList.add('in');
+      });
+      obs.unobserve(grid);
+    });
+  },{threshold:.06});
+  obs.observe(grid);
+})();
+
+/* Service card image wipe handled by staggerGrid callback above */
+
+/* ── Enhanced product tab switch ── */
+(function(){
+  const origFilter=window.filterProd;
+  window.filterProd=function(cat,btn){
+    const grid=document.querySelector('.pcards');
+    if(!grid){origFilter&&origFilter(cat,btn);return;}
+    document.querySelectorAll('.prod-tab').forEach(t=>t.classList.remove('active'));
+    btn.classList.add('active');
+    grid.classList.add('tswitch');
+    setTimeout(()=>{
+      const cards=[...grid.querySelectorAll('.pcard')];
+      cards.forEach((c,i)=>{
+        const show=cat==='all'||c.dataset.cat===cat;
+        c.style.display=show?'flex':'none';
+        if(show){
+          c.style.opacity='0';
+          c.style.transform='translateY(18px)';
+          c.style.transitionDelay=(i*45)+'ms';
+        }
+      });
+      grid.classList.remove('tswitch');
+      requestAnimationFrame(()=>requestAnimationFrame(()=>{
+        cards.filter(c=>c.style.display!=='none').forEach(c=>{
+          c.style.opacity='1';
+          c.style.transform='translateY(0)';
+        });
+      }));
+    },210);
+  };
+})();
+
+/* ── Process items stagger ── */
+(function(){
+  const items=[...document.querySelectorAll('.pitem')];
+  items.forEach((el,i)=>el.style.transitionDelay=(i*65)+'ms');
+  // Already observed by pitemObs, opacity/transform set via CSS, .in handles both
+})();
+
+/* ── Stat number flash on count ── */
+(function(){
+  const origAnimCount=window.animCount;
+  if(origAnimCount){
+    window.animCount=function(el){
+      el.closest('.snum')&&el.closest('.snum').classList.add('flash');
+      origAnimCount(el);
+    };
+  }
+})();
+
+/* ── Subtle parallax on service/product section images ── */
+(function(){
+  const panels=[...document.querySelectorAll('.svc-img-wrap,.pcimg-wrap,.ai-img')];
+  window.addEventListener('scroll',()=>{
+    if(window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+    const mid=scrollY+innerHeight/2;
+    panels.forEach(p=>{
+      const img=p.querySelector('img');
+      if(!img)return;
+      const rect=p.getBoundingClientRect();
+      const pct=(rect.top+rect.height/2)/innerHeight-0.5;
+      img.style.transform=`translateY(${pct*18}px) scale(1.07)`;
+    });
+  },{passive:true});
+})();
+
+/* ── CONTACT FORM ── */
+document.getElementById('cform').addEventListener('submit',function(e){
+  e.preventDefault();
+  const btn=document.getElementById('sbtn');
+  btn.textContent='Message Sent ✓';
+  btn.style.opacity='.65';
+  btn.disabled=true;
+  this.querySelectorAll('.fi,.fta').forEach(i=>{i.style.borderColor='rgba(255,255,255,.22)';i.style.background='rgba(255,255,255,.06)'});
+  setTimeout(()=>{
+    btn.textContent='Send Inquiry →';btn.style.opacity='';btn.disabled=false;
+    this.reset();
+    this.querySelectorAll('.fi,.fta').forEach(i=>{i.style.borderColor='';i.style.background='';});
+  },4000);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Liquid Processing Plants — Perfect Engineering Limited</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --void:#000;--bone:#fff;--charcoal:#1a1a1a;--panel:#232323;--panel2:#2a2a2a;
+  --fd:'Cormorant Garamond',Georgia,serif;--fb:'Inter',system-ui,sans-serif;
+  --dp:clamp(52px,7vw,96px);--hd:clamp(38px,5vw,72px);--sh:clamp(28px,3.5vw,50px);
+  --r50:50px;--rpill:1000px;
+  --s8:8px;--s12:12px;--s16:16px;--s24:24px;--s32:32px;--s48:48px;--s64:64px;--s96:96px;--s128:128px;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--void);color:var(--bone);font-family:var(--fb);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;opacity:0;animation:pagein .6s var(--ease) .05s forwards}
+@keyframes pagein{to{opacity:1}}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+
+.disp{font-family:var(--fd);font-size:var(--dp);font-weight:300;line-height:.85;letter-spacing:-.025em}
+.hd{font-family:var(--fd);font-size:var(--hd);font-weight:300;line-height:.9;letter-spacing:-.02em}
+.sh{font-family:var(--fd);font-size:var(--sh);font-weight:300;line-height:.95;letter-spacing:-.015em}
+.body{font-size:17px;line-height:1.82;color:rgba(255,255,255,.55)}
+.wrap{max-width:1440px;margin:0 auto;padding:0 var(--s48)}
+.sec{padding:var(--s128) 0}
+.ey{display:flex;align-items:center;gap:var(--s16);margin-bottom:var(--s24)}
+.eline{width:32px;height:1px;background:rgba(255,255,255,.2)}
+.etxt{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.33)}
+.pill{display:inline-flex;align-items:center;padding:6px 18px;border:1px solid rgba(255,255,255,.15);border-radius:var(--rpill);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.tag{padding:4px 14px;border:1px solid rgba(255,255,255,.1);border-radius:var(--rpill);font-size:12px;color:rgba(255,255,255,.38);letter-spacing:.04em}
+.divider{width:100%;height:1px;background:rgba(255,255,255,.07)}
+.btnp{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:var(--bone);border:1px solid var(--bone);border-radius:var(--rpill);font-size:13px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--void);transition:opacity .25s,transform .3s var(--ease)}
+.btnp:hover{opacity:.82;transform:translateY(-2px)}
+.btng{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;border:1px solid rgba(255,255,255,.25);border-radius:var(--rpill);font-size:13px;font-weight:400;letter-spacing:.07em;text-transform:uppercase;color:var(--bone);transition:border-color .25s,background .25s,transform .3s var(--ease)}
+.btng:hover{border-color:rgba(255,255,255,.55);background:rgba(255,255,255,.05);transform:translateY(-2px)}
+
+@media(max-width:768px){.wrap{padding:0 var(--s24)}.sec{padding:var(--s96) 0}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 var(--s48);height:70px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,backdrop-filter .4s,border-color .4s;border-bottom:1px solid transparent}
+nav.sc{background:rgba(0,0,0,.92);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-color:rgba(255,255,255,.07)}
+.nlogo{font-size:13px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--bone)}
+.nlinks{display:flex;align-items:center;gap:28px;list-style:none}
+.nlinks a{font-size:14px;color:rgba(255,255,255,.5);position:relative;padding-bottom:2px;transition:color .2s}
+.nlinks a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--bone);transition:width .35s var(--ease)}
+.nlinks a:hover{color:var(--bone)}
+.nlinks a:hover::after{width:100%}
+.ncta{font-size:13px;color:var(--bone);border:1px solid rgba(255,255,255,.22);border-radius:var(--rpill);padding:9px 24px;letter-spacing:.06em;transition:border-color .2s,background .2s}
+.ncta:hover{border-color:rgba(255,255,255,.55);background:rgba(255,255,255,.06)}
+.nmob{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.nmob span{width:22px;height:1.5px;background:var(--bone);display:block;transition:transform .35s var(--ease),opacity .25s}
+.nmob.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nmob.open span:nth-child(2){opacity:0}
+.nmob.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+@media(max-width:900px){.nlinks{display:none}.nmob{display:flex}nav{padding:0 var(--s24)}}
+
+.mobmenu{position:fixed;inset:0;z-index:150;background:rgba(0,0,0,.97);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:var(--s32);opacity:0;pointer-events:none;transition:opacity .4s var(--ease)}
+.mobmenu.open{opacity:1;pointer-events:all}
+.mobmenu a{font-family:var(--fd);font-size:clamp(36px,8vw,60px);font-weight:300;color:rgba(255,255,255,.7);transition:color .2s,transform .2s}
+.mobmenu a:hover{color:var(--bone);transform:translateX(8px)}
+
+/* SCROLL REVEAL */
+.sr{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.sr.in{opacity:1;transform:translateY(0)}
+.sr-l{opacity:0;transform:translateX(-36px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+.sr-l.in{opacity:1;transform:translateX(0)}
+.sr-r{opacity:0;transform:translateX(36px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+.sr-r.in{opacity:1;transform:translateX(0)}
+.sd1{transition-delay:.05s}.sd2{transition-delay:.13s}.sd3{transition-delay:.21s}.sd4{transition-delay:.29s}
+
+/* HERO */
+.hero{min-height:90vh;position:relative;display:flex;align-items:flex-end;overflow:hidden}
+.hbg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hbg img{width:100%;height:115%;object-fit:cover;filter:brightness(.18);will-change:transform}
+.hbg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.1) 0%,rgba(0,0,0,.6) 65%,rgba(0,0,0,1) 100%)}
+.hcont{position:relative;z-index:1;width:100%;padding:var(--s128) var(--s48) var(--s96)}
+@media(max-width:768px){.hcont{padding:100px var(--s24) var(--s48)}}
+.breadcrumb{display:flex;align-items:center;gap:var(--s12);margin-bottom:var(--s48);flex-wrap:wrap}
+.breadcrumb a,.breadcrumb span{font-size:13px;letter-spacing:.07em;color:rgba(255,255,255,.33);transition:color .2s}
+.breadcrumb a:hover{color:rgba(255,255,255,.7)}
+.breadcrumb .sep{color:rgba(255,255,255,.15)}
+.breadcrumb .cur-bc{color:rgba(255,255,255,.6)}
+.hgrid{display:grid;grid-template-columns:1fr auto;gap:var(--s48);align-items:flex-end}
+@media(max-width:900px){.hgrid{grid-template-columns:1fr}}
+.hright{display:flex;flex-direction:column;align-items:flex-end;gap:var(--s12);padding-bottom:8px}
+@media(max-width:900px){.hright{flex-direction:row;flex-wrap:wrap;margin-top:var(--s24)}}
+.hr{opacity:0;transform:translateY(30px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.hr.in{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.08s}.d2{transition-delay:.22s}.d3{transition-delay:.38s}.d4{transition-delay:.52s}
+
+/* INTRO STRIP */
+.intro-strip{padding:var(--s64) 0;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);background:var(--charcoal)}
+.intro-inner{display:grid;grid-template-columns:1fr 1fr;gap:var(--s64);align-items:center}
+@media(max-width:768px){.intro-inner{grid-template-columns:1fr;gap:var(--s32)}}
+.spec-pills{display:flex;flex-wrap:wrap;gap:var(--s8)}
+
+/* SUB-SEGMENT SECTIONS */
+.segment{padding:var(--s128) 0;border-top:1px solid rgba(255,255,255,.06)}
+.seg-inner{display:grid;grid-template-columns:1fr 1fr;gap:var(--s96);align-items:flex-start}
+@media(max-width:900px){.seg-inner{grid-template-columns:1fr;gap:var(--s48)}}
+.seg-inner.rev{direction:rtl}
+.seg-inner.rev>*{direction:ltr}
+.seg-imgcol{display:flex;flex-direction:column;gap:var(--s16)}
+.seg-img{border-radius:var(--r50);overflow:hidden;position:relative}
+.seg-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.55) contrast(1.1);transition:filter .6s,transform .7s var(--ease);}
+.seg-img:hover img{filter:brightness(.68) contrast(1.1);transform:scale(1.03)}
+.seg-img.tall{aspect-ratio:3/4}
+.seg-img.wide{aspect-ratio:16/9}
+.seg-img-sm{aspect-ratio:4/3;border-radius:32px;overflow:hidden;background:var(--panel)}
+.seg-img-sm img{width:100%;height:100%;object-fit:cover;opacity:.5}
+.seg-num-badge{position:absolute;bottom:var(--s24);left:var(--s24);z-index:2;background:rgba(0,0,0,.72);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.13);border-radius:var(--rpill);padding:8px 20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.seg-content{display:flex;flex-direction:column;gap:var(--s32);padding-top:var(--s16)}
+.seg-label{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.25)}
+.seg-title{font-family:var(--fd);font-size:clamp(36px,4.5vw,64px);font-weight:300;line-height:.9;letter-spacing:-.02em}
+.seg-desc{font-size:17px;line-height:1.82;color:rgba(255,255,255,.52)}
+.seg-features{display:flex;flex-direction:column;gap:0;border-top:1px solid rgba(255,255,255,.07)}
+.feat-item{display:flex;align-items:flex-start;gap:var(--s16);padding:var(--s20,20px) 0;border-bottom:1px solid rgba(255,255,255,.07);transition:background .2s}
+.feat-item:hover{background:rgba(255,255,255,.02);margin:0 -var(--s16);padding-left:var(--s16);padding-right:var(--s16)}
+.feat-arrow{flex-shrink:0;font-size:12px;color:rgba(255,255,255,.2);margin-top:2px;transition:color .2s,transform .2s}
+.feat-item:hover .feat-arrow{color:rgba(255,255,255,.5);transform:translateX(4px)}
+.feat-text{font-size:15px;color:rgba(255,255,255,.5);line-height:1.65;flex:1}
+.feat-text strong{color:rgba(255,255,255,.78);font-weight:400}
+.seg-options{margin-top:var(--s8)}
+.seg-options-title{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:var(--s16)}
+.seg-options-grid{display:flex;flex-wrap:wrap;gap:var(--s8)}
+.opt-tag{padding:7px 18px;border:1px solid rgba(255,255,255,.1);border-radius:var(--rpill);font-size:13px;color:rgba(255,255,255,.42);transition:border-color .2s,color .2s}
+.opt-tag:hover{border-color:rgba(255,255,255,.3);color:rgba(255,255,255,.7)}
+
+/* HISTORY BOX */
+.history-box{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:var(--s32);margin-top:var(--s24)}
+.history-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:var(--s12)}
+.history-text{font-size:16px;color:rgba(255,255,255,.55);line-height:1.75;font-style:italic;font-family:var(--fd)}
+
+/* CTA */
+.lp-cta{background:var(--panel);border-radius:var(--r50);padding:var(--s96) var(--s64);display:flex;flex-direction:column;align-items:center;text-align:center;gap:var(--s32);margin:0 var(--s48) var(--s128)}
+@media(max-width:768px){.lp-cta{padding:var(--s64) var(--s32);border-radius:32px;margin:0 var(--s24) var(--s96)}}
+.lp-cta-btns{display:flex;gap:var(--s16);flex-wrap:wrap;justify-content:center}
+
+/* FOOTER MINI */
+footer{padding:var(--s48) 0;border-top:1px solid rgba(255,255,255,.06)}
+.fbot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--s16)}
+.fbot p{font-size:13px;color:rgba(255,255,255,.2)}
+.fbot-links{display:flex;gap:var(--s24)}
+.fbot-links a{font-size:13px;color:rgba(255,255,255,.3);transition:color .2s}
+.fbot-links a:hover{color:var(--bone)}
+</style>
+</head>
+<body>
+
+<!-- MOBILE MENU -->
+<div class="mobmenu" id="mobmenu">
+  <a href="index.html" onclick="closeMob()">Home</a>
+  <a href="index.html#services" onclick="closeMob()">Services</a>
+  <a href="index.html#products" onclick="closeMob()">Products</a>
+  <a href="index.html#industries" onclick="closeMob()">Industries</a>
+  <a href="about.html" onclick="closeMob()">About</a>
+  <a href="index.html#contact" onclick="closeMob()">Contact</a>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="nlogo">Perfect Engineering</a>
+  <ul class="nlinks">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#products" class="active" style="color:var(--bone)">Products</a></li>
+    <li><a href="index.html#industries">Industries</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:var(--s16)">
+    <a href="index.html#contact" class="ncta">Get in Touch</a>
+    <div class="nmob" id="hambtn" onclick="toggleMob()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hbg">
+    <img src="https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?w=1920&q=80" alt="Liquid processing dairy plant" id="hbgimg"/>
+  </div>
+  <div class="hcont">
+    <div class="breadcrumb hr d1">
+      <a href="index.html">Home</a>
+      <span class="sep">›</span>
+      <a href="index.html#products">Products</a>
+      <span class="sep">›</span>
+      <span class="cur-bc">Liquid Processing</span>
+    </div>
+    <div class="hgrid">
+      <div>
+        <p class="etxt hr d2" style="margin-bottom:var(--s24)">Processing Plants · Liquid Division</p>
+        <h1 class="disp hr d3">Liquid<br/>Processing<br/>Plants</h1>
+      </div>
+      <div class="hright hr d4">
+        <span class="pill">Milk Processing</span>
+        <span class="pill">Buttermilk &amp; Cream</span>
+        <span class="pill">Whey Processing</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO STRIP -->
+<div class="intro-strip">
+  <div class="wrap">
+    <div class="intro-inner sr">
+      <div>
+        <h2 class="sh" style="margin-bottom:var(--s24)">Complete Liquid Handling Systems</h2>
+        <p class="body">Precision-engineered liquid processing plants for the dairy and food industry — from raw milk reception through to final product dispatch. Every system is designed for maximum hygiene, efficiency, and durability.</p>
+      </div>
+      <div>
+        <p class="etxt" style="margin-bottom:var(--s16)">Plant specifications</p>
+        <div class="spec-pills">
+          <span class="pill">Temperature Controlled</span>
+          <span class="pill">316L Stainless Steel</span>
+          <span class="pill">Mirror-Polished</span>
+          <span class="pill">CIP-Ready</span>
+          <span class="pill">Full Instrumentation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SEGMENT 1: MILK PROCESSING PLANT            -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="segment" id="milk">
+  <div class="wrap">
+    <div class="seg-inner">
+      <div class="seg-imgcol sr-l">
+        <div class="seg-img tall">
+          <img src="https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?w=900&q=80" alt="Milk processing plant stainless steel tanks"/>
+          <div class="seg-num-badge">01 · Milk Processing</div>
+        </div>
+        <div class="seg-img-sm sr sd2">
+          <img src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?w=600&q=75" alt="Dairy processing equipment detail"/>
+        </div>
+      </div>
+      <div class="seg-content sr-r sd2">
+        <div>
+          <div class="seg-label">Plant Type 01</div>
+          <h2 class="seg-title">Milk<br/>Processing<br/>Plant</h2>
+        </div>
+
+        <div class="history-box">
+          <div class="history-label">Heritage &amp; Lineage</div>
+          <div class="history-text">"Through our sister concern Satnam Process Engineering, we have been manufacturing Milk Processing Plants since 1995 — bringing nearly three decades of continuous refinement to every project."</div>
+        </div>
+
+        <p class="seg-desc">Comprehensive milk processing plants engineered for precise temperature control, hygiene, and operational reliability. Every system is designed around the client's specific throughput requirements and regulatory environment.</p>
+
+        <div class="seg-features">
+          <div class="feat-item">
+            <span class="feat-arrow">→</span>
+            <span class="feat-text"><strong>Temperature-Controlled Pasteurizers</strong> — Process heat exchangers maintain exact time-temperature profiles for HTST and LTLT pasteurisation with full automated control and alarm management.</span>
+          </div>
+          <div class="feat-item">
+            <span class="feat-arrow">→</span>
+            <span class="feat-text"><strong>Agitators</strong> — Carefully designed agitation systems ensure homogeneous mixing and temperature uniformity across the full tank volume without product damage.</span>
+          </div>
+          <div class="feat-item">
+            <span class="feat-arrow">→</span>
+            <span class="feat-text"><strong>Process Piping</strong> — All product-contact piping fabricated in 316L stainless steel, electropolished, slope-drained and CIP-validated to the highest hygienic standards.</span>
+          </div>
+          <div class="feat-item">
+            <span class="feat-arrow">→</span>
+            <span class="feat-text"><strong>Integrated CIP Systems</strong> — Fully automated clean-in-place circuits with chemical dosing, temperature monitoring, and rinse verification.</span>
+          </div>
+          <div class="feat-item">
+            <span class="feat-arrow">→</span>
+            <span class="feat-text"><strong>Separation &amp; Standardisation</strong> — In-line separators and standardisation equipment to achieve precise fat content targets automatically.</span>
+          </div>
+          <div class="feat-item">
+            <span class="feat-arrow">→</span>
+            <span class="feat-text"><strong>Storage Silos</strong> — Insulated raw milk and pasteurised milk silos with continuous agitation and temperature monitoring, up to 300KL capacity.</span>
+          </div>
+        </div>
+
+        <a href="index.html#contact" class="btnp" style="margin-top:var(--s8);width:fit-content">Enquire About This Plant</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SEGMENT 2: BUTTERMILK / CREAM              -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="segment" id="buttermilk" style="background:var(--charcoal)">
+  <div class="wrap">
+    <div class="seg-inner rev">
+      <div class="seg-imgcol sr-r">
+        <div class="seg-img tall">
+          <img src="https://images.unsplash.com/photo-1619995845161-b24a49a2d1cf?w=900&q=80" alt="Cream processing equipment"/>
+          <div class="seg-num-badge">02 · Buttermilk &amp; Cream</div>
+        </div>
+        <div class="seg-img-sm sr sd2">
+          <img src="https://images.unsplash.com/photo-1607349913338-fca6f7fc42d0?w=600&q=75" alt="Dairy cream processing detail"/>
+        </div>
+      </div>
+      <div class="seg-content sr-l sd2">
+        <div>
+          <div class="seg-label">Plant Type 02</div>
+          <h2 class="seg-title">Buttermilk &amp;<br/>Cream<br/>Processing</h2>
+        </div>
+
+        <p class="seg-desc">Specialised processing systems engineered for the unique rheological and thermal properties of cream and buttermilk. Our equipment maintains the stability of cream-based products throughout the entire process chain.</p>
+
+        <div class="seg-features">
+          <div class="feat-item">
+            <span class="feat-arrow">→</span>
+            <span class="feat-text"><strong>Cream Base Stability</strong> — All equipment is designed to preserve and maintain the stability of cream-based products, with gentle handling to prevent fat phase disruption.</span>
+          </div>
+          <div class="feat-item">
+            <span class="feat-arrow">→</span>
+            <span class="feat-text"><strong>Tailored Equipment Configuration</strong> — Systems are custom-configured to each client's product mix, capacity requirements, and available utilities — no off-the-shelf compromises.</span>
+          </div>
+          <div class="feat-item">
+            <span class="feat-arrow">→</span>
+            <span class="feat-text"><strong>Weld Polishing to Hygienic Standard</strong> — All internal welds are dressed and electropolished to Ra &lt; 0.8µm, eliminating bacteria harbouring sites and simplifying CIP.</span>
+          </div>
+          <div class="feat-item">
+            <span class="feat-arrow">→</span>
+            <span class="feat-text"><strong>Precision Temperature Management</strong> — Close-tolerance temperature control during pasteurisation, cooling, and storage to preserve product quality and shelf life.</span>
+          </div>
+          <div class="feat-item">
+            <span class="feat-arrow">→</span>
+            <span class="feat-text"><strong>Buttermilk Separation Circuit</strong> — Dedicated separation and standardisation loop for cultured buttermilk production with controlled acidification monitoring.</span>
+          </div>
+          <div class="feat-item">
+            <span class="feat-arrow">→</span>
+            <span class="feat-text"><strong>Fat Monitoring &amp; Control</strong> — In-line fat content analysers linked to standardisation valves for real-time product specification control.</span>
+          </div>
+        </div>
+
+        <a href="index.html#contact" class="btnp" style="margin-top:var(--s8);width:fit-content">Enquire About This Plant</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SEGMENT 3: WHEY PROCESSING PLANT           -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="segment" id="whey">
+  <div class="wrap">
+    <div class="seg-inner">
+      <div class="seg-imgcol sr-l">
+        <div class="seg-img tall">
+          <img src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=900&q=80" alt="Whey processing crystallizer tanks"/>
+          <div class="seg-num-badge">03 · Whey Processing</div>
+        </div>
+        <div class="seg-img-sm sr sd2">
+          <img src="https://images.unsplash.com/photo-1558618047-f4e60cee7007?w=600&q=75" alt="Whey processing equipment close up"/>
+        </div>
+      </div>
+      <div class="seg-content sr-r sd2">
+        <div>
+          <div class="seg-label">Plant Type 03</div>
+          <h2 class="seg-title">Whey<br/>Processing<br/>Plant</h2>
+        </div>
+
+        <p class="seg-desc">Engineered specifically for the demanding byproduct stream from cheese production — recovering maximum value from whey through precision crystallisation and concentration processes.</p>
+
+        <div class="seg-features">
+          <div class="feat-item">
+            <span class="feat-arrow">→</span>
+            <span class="feat-text"><strong>Cheese Byproduct Specialist</strong> — Plants designed specifically for the highly variable composition of whey from cheese production, handling both sweet whey and acid whey streams.</span>
+          </div>
+          <div class="feat-item">
+            <span class="feat-arrow">→</span>
+            <span class="feat-text"><strong>Crystallizer Tanks</strong> — Purpose-built crystallisation vessels with controlled agitation and temperature ramping profiles for maximum lactose crystal yield and purity.</span>
+          </div>
+          <div class="feat-item">
+            <span class="feat-arrow">→</span>
+            <span class="feat-text"><strong>Concentration &amp; Evaporation</strong> — Multi-effect evaporation systems for pre-concentrating whey prior to crystallisation, optimising energy consumption.</span>
+          </div>
+          <div class="feat-item">
+            <span class="feat-arrow">→</span>
+            <span class="feat-text"><strong>Protein Recovery</strong> — Integrated ultrafiltration circuits for whey protein concentrate (WPC) and whey protein isolate (WPI) production.</span>
+          </div>
+        </div>
+
+        <!-- OPTIONS -->
+        <div class="seg-options">
+          <div class="seg-options-title">Available Options &amp; Configurations</div>
+          <div class="seg-options-grid">
+            <div class="opt-tag">Stainless Steel Exterior Cladding</div>
+            <div class="opt-tag">Adjustable SS Legs</div>
+            <div class="opt-tag">Extended Alcove / Manway</div>
+            <div class="opt-tag">Access Ladder &amp; Safety Cage</div>
+            <div class="opt-tag">Recording Thermometer</div>
+            <div class="opt-tag">Liquid Level Gauge</div>
+            <div class="opt-tag">Custom Agitation Configuration</div>
+            <div class="opt-tag">CIP Spray Ball Circuit</div>
+          </div>
+        </div>
+
+        <a href="index.html#contact" class="btnp" style="margin-top:var(--s8);width:fit-content">Enquire About This Plant</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANCHOR NAV WITHIN PAGE -->
+<section style="padding:var(--s64) 0;background:var(--panel);border-top:1px solid rgba(255,255,255,.07)">
+  <div class="wrap">
+    <div style="display:flex;align-items:center;justify-content:center;gap:var(--s8);flex-wrap:wrap">
+      <a href="#milk" class="btng" style="padding:12px 28px;font-size:12px">01 Milk Processing ↑</a>
+      <a href="#buttermilk" class="btng" style="padding:12px 28px;font-size:12px">02 Buttermilk &amp; Cream ↑</a>
+      <a href="#whey" class="btng" style="padding:12px 28px;font-size:12px">03 Whey Processing ↑</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding:var(--s128) 0">
+  <div class="lp-cta sr">
+    <div class="ey" style="justify-content:center"><div class="eline"></div><span class="etxt">Start a Plant Project</span><div class="eline"></div></div>
+    <h2 class="hd" style="max-width:680px;text-align:center">Ready to Engineer Your Liquid Processing Plant?</h2>
+    <p class="body" style="max-width:480px;text-align:center">Share your capacity requirements and production goals with our team — we'll engineer a plant precisely around your needs.</p>
+    <div class="lp-cta-btns">
+      <a href="index.html#contact" class="btnp">Get in Touch</a>
+      <a href="index.html#products" class="btng">All Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER MINI -->
+<footer>
+  <div class="wrap">
+    <div class="fbot">
+      <div>
+        <p style="font-size:14px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:6px">Perfect Engineering Limited</p>
+        <p>© 2024 All rights reserved · <a href="tel:+16479621397" style="color:rgba(255,255,255,.3);transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.3)'">+1 (647) 962-1397</a> · <a href="mailto:info@pel13.com" style="color:rgba(255,255,255,.3);transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.3)'">info@pel13.com</a></p>
+      </div>
+      <div class="fbot-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Products</a>
+        <a href="about.html">About</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('sc',scrollY>60)},{passive:true});
+
+const hbgimg=document.getElementById('hbgimg');
+window.addEventListener('scroll',()=>{
+  if(scrollY<window.innerHeight)hbgimg.style.transform=`translateY(${scrollY*.28}px)`;
+},{passive:true});
+
+window.addEventListener('load',()=>{
+  setTimeout(()=>document.querySelectorAll('.hr').forEach(el=>el.classList.add('in')),50);
+});
+
+const srObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('in');srObs.unobserve(e.target)}
+  });
+},{threshold:.1,rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.sr,.sr-l,.sr-r').forEach(el=>srObs.observe(el));
+
+function toggleMob(){
+  document.getElementById('mobmenu').classList.toggle('open');
+  document.getElementById('hambtn').classList.toggle('open');
+}
+function closeMob(){
+  document.getElementById('mobmenu').classList.remove('open');
+  document.getElementById('hambtn').classList.remove('open');
+}
+</script>
+</body>
+</html>
