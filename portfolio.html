@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Portfolio | Perfect Engineering Limited</title>
+<title>Our Work | Perfect Engineering Limited</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
@@ -272,11 +272,10 @@ h1,h2,.hd,.disp{text-wrap:balance}
     <li><a href="index.html">Home</a></li>
     <li><a href="index.html#services">Services</a></li>
     <li><a href="index.html#products">Products</a></li>
-    <li><a href="index.html#industries">Industries</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="index.html#contact">Contact</a></li>
-    <li><a href="about.html" class="page-link">Full Story ↗</a></li>
-    <li><a href="portfolio.html" class="cur page-link">Portfolio ↗</a></li>
+    <li><a href="portfolio.html" class="cur page-link">Our Work ↗</a></li>
+    <li><a href="clients.html" class="page-link">Clients ↗</a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:var(--s16)">
     <a href="index.html#contact" class="ncta">Get in Touch</a>
@@ -286,11 +285,12 @@ h1,h2,.hd,.disp{text-wrap:balance}
 
 <!-- MOBILE MENU -->
 <div class="mobmenu" id="mobmenu">
+  <a href="index.html" onclick="closeMob()">Home</a>
   <a href="index.html#services" onclick="closeMob()">Services</a>
   <a href="index.html#products" onclick="closeMob()">Products</a>
-  <a href="index.html#industries" onclick="closeMob()">Industries</a>
   <a href="about.html" onclick="closeMob()">About</a>
-  <a href="portfolio.html" onclick="closeMob()">Portfolio</a>
+  <a href="portfolio.html" onclick="closeMob()">Our Work</a>
+  <a href="clients.html" onclick="closeMob()">Clients</a>
   <a href="index.html#contact" onclick="closeMob()">Contact</a>
 </div>
 
@@ -299,18 +299,18 @@ h1,h2,.hd,.disp{text-wrap:balance}
   <div class="wrap">
     <div class="phero-grid">
       <div>
-        <div class="phero-tag sr">Our Work · Notable Clients</div>
-        <h1 class="sr d1">Trusted by<br><em>Industry<br>Leaders</em></h1>
-        <p class="phero-sub sr d2">For over two decades, Perfect Engineering has delivered precision stainless steel solutions to some of the world's most demanding food, dairy, and industrial processing companies.</p>
+        <div class="phero-tag sr">Our Work · Projects Delivered</div>
+        <h1 class="sr d1">Fabricated.<br><em>Installed.<br>Proven.</em></h1>
+        <p class="phero-sub sr d2">Every image below is from an actual project — engineered, fabricated, and installed by our team. Precision stainless steel across dairy, food, pharmaceutical, and powder processing.</p>
       </div>
       <div class="phero-stat sr d3">
         <div class="pstat-item">
-          <div class="pstat-num">18+</div>
-          <div class="pstat-lbl">Notable Clients</div>
+          <div class="pstat-num">37+</div>
+          <div class="pstat-lbl">Documented Projects</div>
         </div>
         <div class="pstat-item">
           <div class="pstat-num">300+</div>
-          <div class="pstat-lbl">Projects Delivered</div>
+          <div class="pstat-lbl">Total Projects Delivered</div>
         </div>
         <div class="pstat-item">
           <div class="pstat-num">2</div>
@@ -546,204 +546,20 @@ h1,h2,.hd,.disp{text-wrap:balance}
   </div>
 </div>
 
-<!-- CLIENTS -->
-<section class="client-section">
+<!-- CTA -->
+<section style="padding:var(--s96) 0">
   <div class="wrap">
-
-    <div class="client-intro sr">
-      <div>
-        <div class="ey"><span class="eline"></span><span class="etxt">Notable Clients</span></div>
-        <h2 class="hd">Companies that<br>trust our craft</h2>
-      </div>
-      <p class="client-intro-txt">From global multinationals to India's most iconic dairy brands, our client roster reflects the breadth and calibre of our engineering capability. Every name below represents a relationship built on precision, reliability, and delivery.</p>
-    </div>
-
-    <div class="client-grid sr d2">
-
-      <!-- INTERNATIONAL BRANDS -->
-      <div class="cat-label">International Partners</div>
-
-      <div class="ccard">
-        <div class="ccard-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/TetraPak-Logo_EN.svg" alt="Tetra Pak"
-               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>TP</div>'"/>
-        </div>
-        <div class="ccard-name">Tetra Pak</div>
-        <div class="ccard-cat">Packaging · Sweden</div>
-      </div>
-
-      <div class="ccard">
-        <div class="ccard-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Logo_SPX_Corporation.svg" alt="SPX Flow"
-               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>SPX</div>'"/>
-        </div>
-        <div class="ccard-name">SPX Flow</div>
-        <div class="ccard-cat">Process Equipment · USA</div>
-      </div>
-
-      <div class="ccard">
-        <div class="ccard-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/AlfaLaval-Logo.svg" alt="Alfa Laval"
-               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>AL</div>'"/>
-        </div>
-        <div class="ccard-name">Alfa Laval</div>
-        <div class="ccard-cat">Heat Transfer · Sweden</div>
-      </div>
-
-      <div class="ccard">
-        <div class="ccard-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Nestle_textlogo_blue.svg" alt="Nestlé"
-               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>N</div>'"/>
-        </div>
-        <div class="ccard-name">Nestlé</div>
-        <div class="ccard-cat">Food &amp; Beverage · Switzerland</div>
-      </div>
-
-      <div class="ccard">
-        <div class="ccard-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/PepsiCo_logo.svg" alt="PepsiCo"
-               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>PEP</div>'"/>
-        </div>
-        <div class="ccard-name">PepsiCo</div>
-        <div class="ccard-cat">Beverages · USA</div>
-      </div>
-
-      <div class="ccard">
-        <div class="ccard-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" alt="Coca-Cola"
-               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>CC</div>'"/>
-        </div>
-        <div class="ccard-name">Coca-Cola</div>
-        <div class="ccard-cat">Beverages · USA</div>
-      </div>
-
-      <div class="ccard">
-        <div class="ccard-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/GEA_Logo_2022.svg" alt="GEA Group"
-               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>GEA</div>'"/>
-        </div>
-        <div class="ccard-name">GEA Group</div>
-        <div class="ccard-cat">Process Technology · Germany</div>
-      </div>
-
-      <div class="ccard">
-        <div class="ccard-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Nutricia_logo.svg" alt="Nutricia"
-               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>NUT</div>'"/>
-        </div>
-        <div class="ccard-name">Nutricia</div>
-        <div class="ccard-cat">Infant Nutrition · Netherlands</div>
-      </div>
-
-      <!-- INDIAN DAIRY & FOOD -->
-      <div class="cat-label">Indian Dairy &amp; Food Industry</div>
-
-      <div class="ccard">
-        <div class="ccard-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Amul_official_logo.svg" alt="Amul"
-               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>AM</div>'"/>
-        </div>
-        <div class="ccard-name">Amul</div>
-        <div class="ccard-cat">Dairy Cooperative · India</div>
-      </div>
-
-      <div class="ccard">
-        <div class="ccard-logo">
-          <div class="ccard-initial">VK</div>
-        </div>
-        <div class="ccard-name">Verka</div>
-        <div class="ccard-cat">Dairy · Punjab, India</div>
-      </div>
-
-      <div class="ccard">
-        <div class="ccard-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/en/5/50/Britannia_Industries_logo_with_motto.svg" alt="Britannia"
-               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>BR</div>'"/>
-        </div>
-        <div class="ccard-name">Britannia</div>
-        <div class="ccard-cat">Food &amp; Biscuits · India</div>
-      </div>
-
-      <div class="ccard">
-        <div class="ccard-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Haldiram%27s_Logo_SVG.svg" alt="Haldiram's"
-               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>HD</div>'"/>
-        </div>
-        <div class="ccard-name">Haldiram's</div>
-        <div class="ccard-cat">Snacks &amp; Sweets · India</div>
-      </div>
-
-      <div class="ccard">
-        <div class="ccard-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Hatsun_agro_pro_logo.png" alt="Hatsun Agro"
-               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>HAP</div>'"/>
-        </div>
-        <div class="ccard-name">Hatsun Agro</div>
-        <div class="ccard-cat">Dairy Products · India</div>
-      </div>
-
-      <!-- REGIONAL / INDUSTRIAL -->
-      <div class="cat-label">Regional &amp; Industrial Partners</div>
-
-      <div class="ccard">
-        <div class="ccard-logo">
-          <img src="logos/dumex.png" alt="Dumex"
-               style="max-width:96px;max-height:96px"
-               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>DX</div>'"/>
-        </div>
-        <div class="ccard-name">Dumex</div>
-        <div class="ccard-cat">Infant Nutrition · Danone Group</div>
-      </div>
-
-      <div class="ccard">
-        <div class="ccard-logo">
-          <div class="ccard-initial">SA</div>
-        </div>
-        <div class="ccard-name">Supreme Agro</div>
-        <div class="ccard-cat">Agro Processing · India</div>
-      </div>
-
-      <div class="ccard">
-        <div class="ccard-logo">
-          <img src="logos/idmc.png" alt="IDMC Limited"
-               style="max-width:160px;max-height:56px"
-               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>IDMC</div>'"/>
-        </div>
-        <div class="ccard-name">IDMC Limited</div>
-        <div class="ccard-cat">Dairy Equipment · India</div>
-      </div>
-
-      <div class="ccard">
-        <div class="ccard-logo">
-          <div class="ccard-initial">AN</div>
-        </div>
-        <div class="ccard-name">Aneja's</div>
-        <div class="ccard-cat">Food Processing · India</div>
-      </div>
-
-      <div class="ccard">
-        <div class="ccard-logo">
-          <div class="ccard-initial">AFD</div>
-        </div>
-        <div class="ccard-name">AmulFed Dairy</div>
-        <div class="ccard-cat">Mother Dairy · Gujarat, India</div>
-      </div>
-
-    </div>
-
-    <!-- CTA -->
     <div class="pcta sr">
-      <h2>Ready to join<br><em>our client list?</em></h2>
-      <p>Tell us about your processing requirements and our team will engineer a solution built precisely to your standards.</p>
+      <h2>Want to see<br><em>who we work with?</em></h2>
+      <p>Browse our client roster — from global multinationals to India's most iconic dairy brands.</p>
       <div class="pcta-btns">
-        <a href="index.html#contact" class="btn-prim">
+        <a href="clients.html" class="btn-prim">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px"><path d="M6 12h12m0 0l-4-4m4 4l-4 4"/></svg>
-          Start a Project
+          Our Clients
         </a>
-        <a href="about.html" class="btn-sec">Learn About Us</a>
+        <a href="index.html#contact" class="btn-sec">Start a Project</a>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -779,8 +595,8 @@ h1,h2,.hd,.disp{text-wrap:balance}
         <div class="fctitle">Company</div>
         <ul class="flinks">
           <li><a href="about.html">About Us</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="index.html#industries">Industries</a></li>
+          <li><a href="portfolio.html">Our Work</a></li>
+          <li><a href="clients.html">Our Clients</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
       </div>

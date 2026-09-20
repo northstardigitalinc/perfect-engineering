@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Our Clients | Perfect Engineering Limited</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --void:#000;--bone:#fff;--charcoal:#111;--panel:#1e1e1e;--panel2:#252525;
+  --fd:'Cormorant Garamond',Georgia,serif;
+  --fb:'Inter',system-ui,sans-serif;
+  --dp:clamp(62px,8vw,108px);
+  --hd:clamp(44px,6vw,80px);
+  --sh:clamp(30px,4vw,54px);
+  --r50:50px;--rpill:1000px;
+  --s8:8px;--s12:12px;--s16:16px;--s24:24px;--s32:32px;--s48:48px;--s64:64px;--s96:96px;--s128:128px;
+  --ease:cubic-bezier(.16,1,.3,1);--spring:cubic-bezier(.34,1.56,.64,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--void);color:var(--bone);font-family:var(--fb);font-size:17px;line-height:1.65;letter-spacing:-.01em;overflow-x:hidden;-webkit-font-smoothing:antialiased;opacity:0;animation:pagein .6s var(--ease) .05s forwards}
+@keyframes pagein{to{opacity:1}}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.disp{font-family:var(--fd);font-size:var(--dp);font-weight:300;line-height:.85;letter-spacing:-.025em}
+.hd{font-family:var(--fd);font-size:var(--hd);font-weight:300;line-height:.9;letter-spacing:-.02em}
+.wrap{max-width:1440px;margin:0 auto;padding:0 var(--s48)}
+.sec{padding:var(--s128) 0}
+@media(max-width:768px){.wrap{padding:0 var(--s24)}.sec{padding:var(--s96) 0}}
+.ey{display:flex;align-items:center;gap:var(--s16);margin-bottom:var(--s32)}
+.eline{width:32px;height:1px;background:rgba(255,255,255,.22)}
+.etxt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35)}
+h1,h2,.hd,.disp{text-wrap:balance}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 var(--s48);height:68px;display:flex;align-items:center;justify-content:space-between;background:rgba(0,0,0,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nlogo{display:flex;align-items:center;transition:opacity .2s}
+.nlogo img{height:38px;width:auto}
+.nlogo:hover{opacity:.7}
+.nlinks{list-style:none;display:flex;gap:var(--s32);align-items:center}
+.nlinks a{font-size:13px;letter-spacing:.04em;color:rgba(255,255,255,.5);transition:color .2s;position:relative;padding-bottom:2px}
+.nlinks a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--bone);transition:width .35s var(--ease)}
+.nlinks a:hover::after,.nlinks a.cur::after{width:100%}
+.nlinks a:hover,.nlinks a.cur{color:var(--bone)}
+.ncta{display:inline-flex;align-items:center;padding:9px 22px;border:1px solid rgba(255,255,255,.22);border-radius:var(--rpill);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7);transition:all .25s var(--ease),transform .2s var(--ease)}
+.ncta:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.45);color:var(--bone);transform:translateY(-1px) scale(1.04)}
+.nmob{display:none;width:40px;height:40px;align-items:center;justify-content:center;cursor:pointer;flex-direction:column;gap:5px}
+.nmob span{display:block;width:22px;height:1.5px;background:var(--bone);transition:all .35s var(--ease);transform-origin:center}
+.nmob.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nmob.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.nmob.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+@media(max-width:900px){.nlinks{display:none}.nmob{display:flex}nav{padding:0 var(--s24)}}
+
+/* MOBILE MENU */
+.mobmenu{position:fixed;inset:0;z-index:150;background:rgba(0,0,0,.97);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:var(--s24);opacity:0;pointer-events:none;transition:opacity .4s var(--ease)}
+.mobmenu.open{opacity:1;pointer-events:all}
+.mobmenu a{font-family:var(--fd);font-size:clamp(36px,8vw,60px);font-weight:300;color:rgba(255,255,255,.7);transition:color .2s,transform .2s}
+.mobmenu a:hover{color:var(--bone);transform:translateX(8px)}
+
+/* HERO */
+.phero{padding-top:140px;padding-bottom:var(--s64);border-bottom:1px solid rgba(255,255,255,.06)}
+.phero-tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:var(--s24)}
+.phero h1{font-family:var(--fd);font-size:clamp(52px,9vw,120px);font-weight:300;line-height:.85;letter-spacing:-.025em;margin-bottom:var(--s32)}
+.phero-sub{font-size:17px;color:rgba(255,255,255,.45);max-width:520px;line-height:1.75}
+.phero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:flex-end;gap:var(--s64)}
+@media(max-width:768px){.phero-grid{grid-template-columns:1fr;gap:var(--s32)}}
+.phero-stat{display:flex;flex-direction:column;gap:var(--s32);align-items:flex-end}
+@media(max-width:768px){.phero-stat{align-items:flex-start}}
+.pstat-item{text-align:right}
+@media(max-width:768px){.pstat-item{text-align:left}}
+.pstat-num{font-family:var(--fd);font-size:clamp(44px,6vw,72px);font-weight:300;line-height:1;text-shadow:0 0 48px rgba(255,255,255,.1)}
+.pstat-lbl{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:4px}
+
+/* CLIENT GRID */
+.client-section{padding:var(--s128) 0}
+.client-intro{display:grid;grid-template-columns:1fr 1fr;gap:var(--s64);align-items:flex-end;margin-bottom:var(--s96)}
+@media(max-width:768px){.client-intro{grid-template-columns:1fr;gap:var(--s32);margin-bottom:var(--s64)}}
+.client-intro-txt{font-size:17px;color:rgba(255,255,255,.45);line-height:1.8}
+.client-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.06);border-radius:20px;overflow:hidden}
+@media(max-width:1024px){.client-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:640px){.client-grid{grid-template-columns:repeat(2,1fr)}}
+
+.ccard{
+  background:var(--void);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:var(--s16);padding:var(--s48) var(--s32);
+  min-height:270px;
+  position:relative;cursor:default;
+}
+.ccard-logo{width:100%;height:100px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ccard-logo img{max-width:150px;max-height:96px;width:auto;height:auto;object-fit:contain;opacity:.8}
+.ccard-initial{width:64px;height:64px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:28px;font-weight:300;color:rgba(255,255,255,.55);flex-shrink:0}
+.ccard-name{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);text-align:center;line-height:1.4}
+.ccard-cat{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.18);text-align:center;margin-top:-8px}
+
+/* Client card hover */
+.ccard{transition:background .3s var(--ease),transform .35s var(--ease),box-shadow .35s}
+.ccard:hover{background:#0f0f0f;transform:translateY(-5px);box-shadow:0 24px 56px rgba(0,0,0,.55)}
+.ccard-logo img{transition:opacity .35s,transform .45s var(--ease)}
+.ccard:hover .ccard-logo img{opacity:1;transform:scale(1.07)}
+.ccard-initial{transition:border-color .3s,background .3s,transform .3s var(--ease)}
+.ccard:hover .ccard-initial{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.1);transform:scale(1.08)}
+.ccard-name{transition:color .3s}
+.ccard:hover .ccard-name{color:rgba(255,255,255,.65)}
+
+/* CATEGORY DIVIDER */
+.cat-label{grid-column:1/-1;padding:var(--s24) var(--s32) var(--s16);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.18);border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02)}
+
+/* MARQUEE */
+.mq{padding:var(--s24) 0;overflow:hidden;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);margin:var(--s96) 0;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mqt{display:flex;gap:var(--s48);animation:mq 36s linear infinite;white-space:nowrap}
+.mqi{font-family:var(--fd);font-size:15px;font-weight:300;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.16);flex-shrink:0}
+.mqs{color:rgba(255,255,255,.08);margin:0 var(--s16)}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* CTA BAND */
+.pcta{margin-top:var(--s96);padding:var(--s96) var(--s64);background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:var(--r50);text-align:center;transition:border-color .35s}
+.pcta:hover{border-color:rgba(255,255,255,.13)}
+@media(max-width:768px){.pcta{padding:var(--s64) var(--s24);border-radius:32px}}
+.pcta h2{font-family:var(--fd);font-size:clamp(36px,6vw,72px);font-weight:300;line-height:.9;letter-spacing:-.02em;margin-bottom:var(--s24)}
+.pcta p{font-size:16px;color:rgba(255,255,255,.45);max-width:480px;margin:0 auto var(--s48);line-height:1.75}
+.pcta-btns{display:flex;gap:var(--s16);justify-content:center;flex-wrap:wrap}
+.btn-prim{display:inline-flex;align-items:center;gap:10px;padding:14px 36px;background:var(--bone);color:var(--void);border-radius:var(--rpill);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;transition:all .3s var(--ease)}
+.btn-prim:hover{background:rgba(255,255,255,.88);transform:translateY(-2px) scale(1.04);box-shadow:0 8px 32px rgba(0,0,0,.5)}
+.btn-prim:active{transform:translateY(0) scale(.97)!important;transition-duration:.08s!important}
+.btn-sec{display:inline-flex;align-items:center;gap:10px;padding:14px 36px;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.65);border-radius:var(--rpill);font-size:12px;letter-spacing:.1em;text-transform:uppercase;transition:all .3s var(--ease)}
+.btn-sec:hover{border-color:rgba(255,255,255,.5);color:var(--bone);transform:translateY(-2px) scale(1.02)}
+.btn-sec:active{transform:translateY(0) scale(.97)!important;transition-duration:.08s!important}
+
+/* FOOTER */
+footer{padding:var(--s96) 0 var(--s48);border-top:1px solid rgba(255,255,255,.06)}
+.ftop{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:var(--s64)}
+@media(max-width:900px){.ftop{grid-template-columns:1fr 1fr;gap:var(--s48)}}
+@media(max-width:560px){.ftop{grid-template-columns:1fr}}
+.flogo{font-family:var(--fd);font-size:26px;font-weight:300;margin-bottom:var(--s8)}
+.ftag{font-size:14px;color:rgba(255,255,255,.22);font-style:italic;font-family:var(--fd)}
+.fctitle{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:var(--s16)}
+.flinks{list-style:none;display:flex;flex-direction:column;gap:var(--s8)}
+.flinks a{font-size:14px;color:rgba(255,255,255,.38);transition:color .2s;background:linear-gradient(to right,rgba(255,255,255,.55),rgba(255,255,255,.55)) no-repeat 0 100%/0% 1px;transition:color .2s,background-size .35s var(--ease)}
+.flinks a:hover{color:rgba(255,255,255,.75);background-size:100% 1px}
+.fbot{display:flex;justify-content:space-between;align-items:center;padding-top:var(--s48);border-top:1px solid rgba(255,255,255,.05);margin-top:var(--s64);font-size:13px;color:rgba(255,255,255,.22)}
+@media(max-width:640px){.fbot{flex-direction:column;gap:var(--s16);text-align:center}}
+
+/* SCROLL REVEAL */
+.sr{opacity:0;transform:translateY(24px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+.sr.in{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.05s}.d2{transition-delay:.1s}.d3{transition-delay:.15s}.d4{transition-delay:.2s}
+
+/* Noise grain */
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.025;pointer-events:none;z-index:9998}
+:focus-visible{outline:1.5px solid rgba(255,255,255,.38);outline-offset:3px;border-radius:4px}
+
+@media(max-width:480px){
+  .ccard:hover{transform:none;box-shadow:none}
+  .btn-prim:hover,.btn-sec:hover{transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- MOBILE MENU -->
+<div class="mobmenu" id="mobmenu">
+  <a href="index.html" onclick="closeMob()">Home</a>
+  <a href="index.html#services" onclick="closeMob()">Services</a>
+  <a href="index.html#products" onclick="closeMob()">Products</a>
+  <a href="about.html" onclick="closeMob()">About</a>
+  <a href="portfolio.html" onclick="closeMob()">Our Work</a>
+  <a href="clients.html" onclick="closeMob()">Clients</a>
+  <a href="index.html#contact" onclick="closeMob()">Contact</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nlogo"><img src="images/pel-logo.png" alt="Perfect Engineering"/></a>
+  <ul class="nlinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#products">Products</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="portfolio.html" class="page-link">Our Work ↗</a></li>
+    <li><a href="clients.html" class="cur page-link">Clients ↗</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:var(--s16)">
+    <a href="index.html#contact" class="ncta">Get in Touch</a>
+    <div class="nmob" onclick="toggleMob()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="phero">
+  <div class="wrap">
+    <div class="phero-grid">
+      <div>
+        <div class="phero-tag sr">Our Clients · Notable Partnerships</div>
+        <h1 class="sr d1">Companies that<br><em>Trust Our<br>Craft</em></h1>
+        <p class="phero-sub sr d2">From global multinationals to India's most iconic dairy brands, our client roster reflects the breadth and calibre of our engineering capability.</p>
+      </div>
+      <div class="phero-stat sr d3">
+        <div class="pstat-item">
+          <div class="pstat-num">18+</div>
+          <div class="pstat-lbl">Notable Clients</div>
+        </div>
+        <div class="pstat-item">
+          <div class="pstat-num">10+</div>
+          <div class="pstat-lbl">Industries Served</div>
+        </div>
+        <div class="pstat-item">
+          <div class="pstat-num">300+</div>
+          <div class="pstat-lbl">Projects Delivered</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq">
+  <div class="mqt">
+    <span class="mqi">Tetra Pak</span><span class="mqs">·</span>
+    <span class="mqi">Alfa Laval</span><span class="mqs">·</span>
+    <span class="mqi">GEA Group</span><span class="mqs">·</span>
+    <span class="mqi">Nestlé</span><span class="mqs">·</span>
+    <span class="mqi">Amul</span><span class="mqs">·</span>
+    <span class="mqi">PepsiCo</span><span class="mqs">·</span>
+    <span class="mqi">Coca-Cola</span><span class="mqs">·</span>
+    <span class="mqi">Britannia</span><span class="mqs">·</span>
+    <span class="mqi">SPX Flow</span><span class="mqs">·</span>
+    <span class="mqi">Nutricia</span><span class="mqs">·</span>
+    <span class="mqi">Haldiram's</span><span class="mqs">·</span>
+    <span class="mqi">IDMC Limited</span><span class="mqs">·</span>
+    <span class="mqi">Hatsun Agro</span><span class="mqs">·</span>
+    <span class="mqi">Verka</span><span class="mqs">·</span>
+    <span class="mqi">Dumex</span><span class="mqs">·</span>
+    <!-- duplicate for seamless loop -->
+    <span class="mqi">Tetra Pak</span><span class="mqs">·</span>
+    <span class="mqi">Alfa Laval</span><span class="mqs">·</span>
+    <span class="mqi">GEA Group</span><span class="mqs">·</span>
+    <span class="mqi">Nestlé</span><span class="mqs">·</span>
+    <span class="mqi">Amul</span><span class="mqs">·</span>
+    <span class="mqi">PepsiCo</span><span class="mqs">·</span>
+    <span class="mqi">Coca-Cola</span><span class="mqs">·</span>
+    <span class="mqi">Britannia</span><span class="mqs">·</span>
+    <span class="mqi">SPX Flow</span><span class="mqs">·</span>
+    <span class="mqi">Nutricia</span><span class="mqs">·</span>
+    <span class="mqi">Haldiram's</span><span class="mqs">·</span>
+    <span class="mqi">IDMC Limited</span><span class="mqs">·</span>
+    <span class="mqi">Hatsun Agro</span><span class="mqs">·</span>
+    <span class="mqi">Verka</span><span class="mqs">·</span>
+    <span class="mqi">Dumex</span><span class="mqs">·</span>
+  </div>
+</div>
+
+<!-- CLIENTS -->
+<section class="client-section">
+  <div class="wrap">
+
+    <div class="client-intro sr">
+      <div>
+        <div class="ey"><span class="eline"></span><span class="etxt">Notable Clients</span></div>
+        <h2 class="hd">Companies that<br>trust our craft</h2>
+      </div>
+      <p class="client-intro-txt">From global multinationals to India's most iconic dairy brands, our client roster reflects the breadth and calibre of our engineering capability. Every name below represents a relationship built on precision, reliability, and delivery.</p>
+    </div>
+
+    <div class="client-grid sr d2">
+
+      <!-- INTERNATIONAL BRANDS -->
+      <div class="cat-label">International Partners</div>
+
+      <div class="ccard">
+        <div class="ccard-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/TetraPak-Logo_EN.svg" alt="Tetra Pak"
+               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>TP</div>'"/>
+        </div>
+        <div class="ccard-name">Tetra Pak</div>
+        <div class="ccard-cat">Packaging · Sweden</div>
+      </div>
+
+      <div class="ccard">
+        <div class="ccard-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Logo_SPX_Corporation.svg" alt="SPX Flow"
+               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>SPX</div>'"/>
+        </div>
+        <div class="ccard-name">SPX Flow</div>
+        <div class="ccard-cat">Process Equipment · USA</div>
+      </div>
+
+      <div class="ccard">
+        <div class="ccard-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/AlfaLaval-Logo.svg" alt="Alfa Laval"
+               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>AL</div>'"/>
+        </div>
+        <div class="ccard-name">Alfa Laval</div>
+        <div class="ccard-cat">Heat Transfer · Sweden</div>
+      </div>
+
+      <div class="ccard">
+        <div class="ccard-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Nestle_textlogo_blue.svg" alt="Nestlé"
+               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>N</div>'"/>
+        </div>
+        <div class="ccard-name">Nestlé</div>
+        <div class="ccard-cat">Food &amp; Beverage · Switzerland</div>
+      </div>
+
+      <div class="ccard">
+        <div class="ccard-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/PepsiCo_logo.svg" alt="PepsiCo"
+               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>PEP</div>'"/>
+        </div>
+        <div class="ccard-name">PepsiCo</div>
+        <div class="ccard-cat">Beverages · USA</div>
+      </div>
+
+      <div class="ccard">
+        <div class="ccard-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" alt="Coca-Cola"
+               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>CC</div>'"/>
+        </div>
+        <div class="ccard-name">Coca-Cola</div>
+        <div class="ccard-cat">Beverages · USA</div>
+      </div>
+
+      <div class="ccard">
+        <div class="ccard-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/GEA_Logo_2022.svg" alt="GEA Group"
+               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>GEA</div>'"/>
+        </div>
+        <div class="ccard-name">GEA Group</div>
+        <div class="ccard-cat">Process Technology · Germany</div>
+      </div>
+
+      <div class="ccard">
+        <div class="ccard-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Nutricia_logo.svg" alt="Nutricia"
+               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>NUT</div>'"/>
+        </div>
+        <div class="ccard-name">Nutricia</div>
+        <div class="ccard-cat">Infant Nutrition · Netherlands</div>
+      </div>
+
+      <!-- INDIAN DAIRY & FOOD -->
+      <div class="cat-label">Indian Dairy &amp; Food Industry</div>
+
+      <div class="ccard">
+        <div class="ccard-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Amul_official_logo.svg" alt="Amul"
+               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>AM</div>'"/>
+        </div>
+        <div class="ccard-name">Amul</div>
+        <div class="ccard-cat">Dairy Cooperative · India</div>
+      </div>
+
+      <div class="ccard">
+        <div class="ccard-logo">
+          <div class="ccard-initial">VK</div>
+        </div>
+        <div class="ccard-name">Verka</div>
+        <div class="ccard-cat">Dairy · Punjab, India</div>
+      </div>
+
+      <div class="ccard">
+        <div class="ccard-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/en/5/50/Britannia_Industries_logo_with_motto.svg" alt="Britannia"
+               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>BR</div>'"/>
+        </div>
+        <div class="ccard-name">Britannia</div>
+        <div class="ccard-cat">Food &amp; Biscuits · India</div>
+      </div>
+
+      <div class="ccard">
+        <div class="ccard-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Haldiram%27s_Logo_SVG.svg" alt="Haldiram's"
+               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>HD</div>'"/>
+        </div>
+        <div class="ccard-name">Haldiram's</div>
+        <div class="ccard-cat">Snacks &amp; Sweets · India</div>
+      </div>
+
+      <div class="ccard">
+        <div class="ccard-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Hatsun_agro_pro_logo.png" alt="Hatsun Agro"
+               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>HAP</div>'"/>
+        </div>
+        <div class="ccard-name">Hatsun Agro</div>
+        <div class="ccard-cat">Dairy Products · India</div>
+      </div>
+
+      <!-- REGIONAL / INDUSTRIAL -->
+      <div class="cat-label">Regional &amp; Industrial Partners</div>
+
+      <div class="ccard">
+        <div class="ccard-logo">
+          <img src="logos/dumex.png" alt="Dumex"
+               style="max-width:96px;max-height:96px"
+               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>DX</div>'"/>
+        </div>
+        <div class="ccard-name">Dumex</div>
+        <div class="ccard-cat">Infant Nutrition · Danone Group</div>
+      </div>
+
+      <div class="ccard">
+        <div class="ccard-logo">
+          <div class="ccard-initial">SA</div>
+        </div>
+        <div class="ccard-name">Supreme Agro</div>
+        <div class="ccard-cat">Agro Processing · India</div>
+      </div>
+
+      <div class="ccard">
+        <div class="ccard-logo">
+          <img src="logos/idmc.png" alt="IDMC Limited"
+               style="max-width:160px;max-height:56px"
+               onerror="this.parentNode.innerHTML='<div class=\'ccard-initial\'>IDMC</div>'"/>
+        </div>
+        <div class="ccard-name">IDMC Limited</div>
+        <div class="ccard-cat">Dairy Equipment · India</div>
+      </div>
+
+      <div class="ccard">
+        <div class="ccard-logo">
+          <div class="ccard-initial">AN</div>
+        </div>
+        <div class="ccard-name">Aneja's</div>
+        <div class="ccard-cat">Food Processing · India</div>
+      </div>
+
+      <div class="ccard">
+        <div class="ccard-logo">
+          <div class="ccard-initial">AFD</div>
+        </div>
+        <div class="ccard-name">AmulFed Dairy</div>
+        <div class="ccard-cat">Mother Dairy · Gujarat, India</div>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="pcta sr">
+      <h2>Ready to join<br><em>our client list?</em></h2>
+      <p>Tell us about your processing requirements and our team will engineer a solution built precisely to your standards.</p>
+      <div class="pcta-btns">
+        <a href="index.html#contact" class="btn-prim">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px"><path d="M6 12h12m0 0l-4-4m4 4l-4 4"/></svg>
+          Start a Project
+        </a>
+        <a href="portfolio.html" class="btn-sec">See Our Work</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="ftop">
+      <div>
+        <div class="flogo"><img src="images/pel-logo.png" alt="Perfect Engineering Ltd" style="height:44px;width:auto"/></div>
+        <div class="ftag">Numberless Possibilities.<br/>Extreme Efficiency.</div>
+        <p style="font-size:14px;color:rgba(255,255,255,.22);line-height:1.7;max-width:270px;margin-top:var(--s16)">Precision stainless steel manufacturing and turnkey process engineering, Canada &amp; India.</p>
+      </div>
+      <div>
+        <div class="fctitle">Products</div>
+        <ul class="flinks">
+          <li><a href="index.html#products">Processing Plants</a></li>
+          <li><a href="index.html#products">Tanks &amp; Silos</a></li>
+          <li><a href="index.html#products">Pasteurizer Skids</a></li>
+          <li><a href="index.html#products">Process Skids</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fctitle">Services</div>
+        <ul class="flinks">
+          <li><a href="index.html#services">Engineering</a></li>
+          <li><a href="index.html#services">Fabrication</a></li>
+          <li><a href="index.html#services">Installation</a></li>
+          <li><a href="index.html#services">Revamping</a></li>
+          <li><a href="index.html#services">Maintenance</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fctitle">Company</div>
+        <ul class="flinks">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="portfolio.html">Our Work</a></li>
+          <li><a href="clients.html">Our Clients</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbot">
+      <p>© 2024 Perfect Engineering Limited. All rights reserved.</p>
+      <p style="color:rgba(255,255,255,.12)">Canada · India · perfectengltd.com</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMob(){
+  document.getElementById('mobmenu').classList.toggle('open');
+  document.querySelector('.nmob').classList.toggle('open');
+}
+function closeMob(){
+  document.getElementById('mobmenu').classList.remove('open');
+  document.querySelector('.nmob').classList.remove('open');
+}
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}});
+},{threshold:.08,rootMargin:'-40px 0px'});
+document.querySelectorAll('.sr').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
