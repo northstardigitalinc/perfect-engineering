@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Pasteurizer Skids — Perfect Engineering Limited</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{--void:#000;--bone:#fff;--charcoal:#1a1a1a;--panel:#232323;--fd:'Cormorant Garamond',Georgia,serif;--fb:'Inter',system-ui,sans-serif;--hd:clamp(38px,5vw,72px);--r50:50px;--rpill:1000px;--s8:8px;--s12:12px;--s16:16px;--s24:24px;--s32:32px;--s48:48px;--s64:64px;--s96:96px;--s128:128px;--ease:cubic-bezier(.16,1,.3,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--void);color:var(--bone);font-family:var(--fb);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;opacity:0;animation:pagein .6s var(--ease) .05s forwards}
+@keyframes pagein{to{opacity:1}}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.hd{font-family:var(--fd);font-size:var(--hd);font-weight:300;line-height:.9;letter-spacing:-.02em}
+.body{font-size:17px;line-height:1.82;color:rgba(255,255,255,.55)}
+.wrap{max-width:1440px;margin:0 auto;padding:0 var(--s48)}
+.etxt{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.33)}
+.tag{padding:4px 14px;border:1px solid rgba(255,255,255,.1);border-radius:var(--rpill);font-size:12px;color:rgba(255,255,255,.38);letter-spacing:.04em}
+.btnp{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:var(--bone);border:1px solid var(--bone);border-radius:var(--rpill);font-size:13px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--void);transition:opacity .25s,transform .3s var(--ease)}
+.btnp:hover{opacity:.82;transform:translateY(-2px)}
+.btng{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;border:1px solid rgba(255,255,255,.25);border-radius:var(--rpill);font-size:13px;font-weight:400;letter-spacing:.07em;text-transform:uppercase;color:var(--bone);transition:border-color .25s,background .25s,transform .3s var(--ease)}
+.btng:hover{border-color:rgba(255,255,255,.55);background:rgba(255,255,255,.05);transform:translateY(-2px)}
+@media(max-width:768px){.wrap{padding:0 var(--s24)}}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 var(--s48);height:70px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,backdrop-filter .4s,border-color .4s;border-bottom:1px solid transparent}
+nav.sc{background:rgba(0,0,0,.92);backdrop-filter:blur(18px);border-color:rgba(255,255,255,.07)}
+.nlogo{font-size:13px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--bone)}
+.nlinks{display:flex;align-items:center;gap:28px;list-style:none}
+.nlinks a{font-size:14px;color:rgba(255,255,255,.5);transition:color .2s}
+.nlinks a:hover{color:var(--bone)}
+.ncta{font-size:13px;color:var(--bone);border:1px solid rgba(255,255,255,.22);border-radius:var(--rpill);padding:9px 24px;letter-spacing:.06em}
+.ncta:hover{border-color:rgba(255,255,255,.55);background:rgba(255,255,255,.06)}
+.nmob{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.nmob span{width:22px;height:1.5px;background:var(--bone);display:block;transition:transform .35s var(--ease),opacity .25s}
+.nmob.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nmob.open span:nth-child(2){opacity:0}
+.nmob.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+@media(max-width:900px){.nlinks{display:none}.nmob{display:flex}nav{padding:0 var(--s24)}}
+.mobmenu{position:fixed;inset:0;z-index:150;background:rgba(0,0,0,.97);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:var(--s32);opacity:0;pointer-events:none;transition:opacity .4s var(--ease)}
+.mobmenu.open{opacity:1;pointer-events:all}
+.mobmenu a{font-family:var(--fd);font-size:clamp(36px,8vw,60px);font-weight:300;color:rgba(255,255,255,.7)}
+.mobmenu a:hover{color:var(--bone)}
+.sr{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.sr.in{opacity:1;transform:translateY(0)}
+.sd2{transition-delay:.13s}
+.hero{min-height:90vh;position:relative;display:flex;align-items:flex-end;overflow:hidden}
+.hbg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hbg img{width:100%;height:115%;object-fit:cover;filter:brightness(.18);will-change:transform}
+.hbg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.1) 0%,rgba(0,0,0,.6) 65%,rgba(0,0,0,1) 100%)}
+.hcont{position:relative;z-index:1;width:100%;padding:var(--s128) var(--s48) var(--s96)}
+@media(max-width:768px){.hcont{padding:100px var(--s24) var(--s48)}}
+.breadcrumb{display:flex;align-items:center;gap:var(--s12);margin-bottom:var(--s48);flex-wrap:wrap}
+.breadcrumb a,.breadcrumb span{font-size:13px;letter-spacing:.07em;color:rgba(255,255,255,.33)}
+.breadcrumb a:hover{color:rgba(255,255,255,.7)}
+.breadcrumb .sep{color:rgba(255,255,255,.15)}
+.breadcrumb .cur-bc{color:rgba(255,255,255,.6)}
+.hgrid{display:grid;grid-template-columns:1fr auto;gap:var(--s48);align-items:flex-end}
+@media(max-width:900px){.hgrid{grid-template-columns:1fr}}
+.hright{display:flex;flex-direction:column;align-items:flex-end;gap:var(--s12)}
+@media(max-width:900px){.hright{flex-direction:row;flex-wrap:wrap;margin-top:var(--s24)}}
+.hr{opacity:0;transform:translateY(30px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.hr.in{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.08s}.d2{transition-delay:.22s}.d3{transition-delay:.38s}.d4{transition-delay:.52s}
+.intro-strip{padding:var(--s64) 0;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);background:var(--charcoal)}
+.intro-inner{display:grid;grid-template-columns:1fr 1fr;gap:var(--s64);align-items:center}
+@media(max-width:768px){.intro-inner{grid-template-columns:1fr;gap:var(--s32)}}
+.spec-pills{display:flex;flex-wrap:wrap;gap:var(--s8)}
+.segment{padding:var(--s128) 0;border-top:1px solid rgba(255,255,255,.06)}
+.seg-inner{display:grid;grid-template-columns:1fr 1fr;gap:var(--s96);align-items:flex-start}
+@media(max-width:900px){.seg-inner{grid-template-columns:1fr;gap:var(--s48)}}
+.seg-inner.rev{direction:rtl}
+.seg-inner.rev>*{direction:ltr}
+.seg-img{border-radius:var(--r50);overflow:hidden;position:relative}
+.seg-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.55) contrast(1.1);transition:filter .6s,transform .7s var(--ease)}
+.seg-img:hover img{filter:brightness(.68) contrast(1.1);transform:scale(1.03)}
+.seg-img.tall{aspect-ratio:3/4}
+.seg-num-badge{position:absolute;bottom:var(--s24);left:var(--s24);z-index:2;background:rgba(0,0,0,.72);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.13);border-radius:var(--rpill);padding:8px 20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.seg-content{display:flex;flex-direction:column;gap:var(--s32);padding-top:var(--s16)}
+.seg-label{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.25)}
+.seg-title{font-family:var(--fd);font-size:clamp(36px,4.5vw,64px);font-weight:300;line-height:.9;letter-spacing:-.02em}
+.seg-desc{font-size:17px;line-height:1.82;color:rgba(255,255,255,.52)}
+.seg-features{display:flex;flex-direction:column;gap:0;border-top:1px solid rgba(255,255,255,.07)}
+.feat-item{display:flex;align-items:flex-start;gap:var(--s16);padding:20px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.feat-arrow{flex-shrink:0;font-size:12px;color:rgba(255,255,255,.2);margin-top:2px}
+.feat-text{font-size:15px;color:rgba(255,255,255,.5);line-height:1.65;flex:1}
+.feat-text strong{color:rgba(255,255,255,.78);font-weight:400}
+.seg-options-grid{display:flex;flex-wrap:wrap;gap:var(--s8);margin-top:var(--s16)}
+.opt-tag{padding:7px 18px;border:1px solid rgba(255,255,255,.1);border-radius:var(--rpill);font-size:13px;color:rgba(255,255,255,.42)}
+.lp-cta{background:var(--panel);border-radius:var(--r50);padding:var(--s96) var(--s64);display:flex;flex-direction:column;align-items:center;text-align:center;gap:var(--s32);margin:0 var(--s48) var(--s128)}
+@media(max-width:768px){.lp-cta{padding:var(--s64) var(--s32);border-radius:32px;margin:0 var(--s24) var(--s96)}}
+.lp-cta-btns{display:flex;gap:var(--s16);flex-wrap:wrap;justify-content:center}
+footer{padding:var(--s48) 0;border-top:1px solid rgba(255,255,255,.06)}
+.fbot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--s16)}
+.fbot p{font-size:13px;color:rgba(255,255,255,.2)}
+.fbot-links{display:flex;gap:var(--s24)}
+.fbot-links a{font-size:13px;color:rgba(255,255,255,.3)}
+.fbot-links a:hover{color:var(--bone)}
+</style>
+</head>
+<body>
+<div class="mobmenu" id="mobmenu">
+  <a href="index.html">Home</a><a href="index.html#services">Services</a><a href="index.html#products">Products</a><a href="index.html#industries">Industries</a><a href="about.html">About</a><a href="index.html#contact">Contact</a>
+</div>
+<nav id="nav">
+  <a href="index.html" class="nlogo">Perfect Engineering</a>
+  <ul class="nlinks">
+    <li><a href="index.html#services">Services</a></li><li><a href="index.html#products" style="color:var(--bone)">Products</a></li><li><a href="index.html#industries">Industries</a></li><li><a href="about.html">About</a></li><li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:var(--s24)">
+    <a href="index.html#contact" class="ncta">Get in Touch</a>
+    <div class="nmob" onclick="this.classList.toggle('open');document.getElementById('mobmenu').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hbg"><img src="images/pasteurizer-skid.png" alt="Pasteurizer skid" id="hbgimg"/></div>
+  <div class="hcont">
+    <div class="breadcrumb hr d1"><a href="index.html">Home</a><span class="sep">›</span><a href="index.html#products">Products</a><span class="sep">›</span><span class="cur-bc">Pasteurizer Skids</span></div>
+    <div class="hgrid">
+      <div>
+        <p class="etxt hr d2" style="margin-bottom:var(--s24)">Equipment · Thermal Processing</p>
+        <h1 class="hd hr d3">Pasteurizer Skids</h1>
+      </div>
+      <div class="hright">
+        <span class="tag hr d3">HTST / LTLT</span>
+        <span class="tag hr d4">Milk & Cream</span>
+        <span class="tag hr d4">GMP Compliant</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="intro-strip">
+  <div class="wrap">
+    <div class="intro-inner">
+      <div>
+        <p class="etxt" style="margin-bottom:var(--s16)">Overview</p>
+        <p style="font-family:var(--fd);font-size:clamp(22px,2.5vw,32px);font-weight:300;line-height:1.15;color:rgba(255,255,255,.85)">Factory-assembled pasteurisation skids for milk, cream, and butter milk — skid-mounted, pre-piped, pre-wired, and factory-tested for rapid site installation.</p>
+      </div>
+      <div>
+        <p class="body" style="margin-bottom:var(--s24)">Our pasteuriser skids are fully integrated systems: plate or tubular heat exchanger, balance tank, feed pump, homogeniser connection, and PLC control panel — all mounted on a single SS skid frame, ready to connect.</p>
+        <div class="spec-pills"><span class="tag">GMP Compliant</span><span class="tag">Full CIP</span><span class="tag">PLC Controlled</span><span class="tag">Factory Tested</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HTST Milk Pasteuriser -->
+<section class="segment">
+  <div class="wrap">
+    <div class="seg-inner">
+      <div class="sr">
+        <div class="seg-img tall">
+          <img src="images/pasteurizer-skid.png" alt="HTST milk pasteurizer skid"/>
+          <div class="seg-num-badge">01 · HTST Milk Pasteuriser</div>
+        </div>
+      </div>
+      <div class="seg-content sr sd2">
+        <div class="seg-label">Segment 01</div>
+        <h2 class="seg-title">HTST Milk<br/>Pasteuriser Skid</h2>
+        <p class="seg-desc">High-temperature short-time (HTST) pasteuriser skids for whole milk, standardised milk, and toned milk. Designed to achieve 72°C / 15 seconds with &gt;95% heat recovery through the regeneration section.</p>
+        <div class="seg-features">
+          <div class="feat-item"><span class="feat-arrow">→</span><span class="feat-text"><strong>Plate Heat Exchanger</strong> — Multi-section PHE: regeneration, heating, and cooling sections</span></div>
+          <div class="feat-item"><span class="feat-arrow">→</span><span class="feat-text"><strong>Balance Tank</strong> — Stainless steel feed balance tank with float valve and level control</span></div>
+          <div class="feat-item"><span class="feat-arrow">→</span><span class="feat-text"><strong>FDD Valve</strong> — Automatic flow diversion device for temperature-failure product return</span></div>
+          <div class="feat-item"><span class="feat-arrow">→</span><span class="feat-text"><strong>Hot Water Unit</strong> — Integrated hot water heating system with temperature PID control</span></div>
+          <div class="feat-item"><span class="feat-arrow">→</span><span class="feat-text"><strong>PLC Panel</strong> — Fully automated sequence control with SCADA-ready communications</span></div>
+          <div class="feat-item"><span class="feat-arrow">→</span><span class="feat-text"><strong>Capacities</strong> — 5,000 to 50,000 litres/hour available as standard configurations</span></div>
+        </div>
+        <div class="seg-options-grid">
+          <span class="opt-tag">Whole Milk</span><span class="opt-tag">Toned Milk</span><span class="opt-tag">Double Toned</span><span class="opt-tag">Flavoured Milk</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Cream & Butter Milk Pasteuriser -->
+<section class="segment" style="background:var(--charcoal)">
+  <div class="wrap">
+    <div class="seg-inner rev">
+      <div class="sr">
+        <div class="seg-img tall">
+          <img src="images/milk-processing.jpg" alt="Cream pasteurizer skid"/>
+          <div class="seg-num-badge">02 · Cream Pasteuriser</div>
+        </div>
+      </div>
+      <div class="seg-content sr sd2">
+        <div class="seg-label">Segment 02</div>
+        <h2 class="seg-title">Cream & Butter Milk<br/>Pasteuriser Skid</h2>
+        <p class="seg-desc">Dedicated pasteurisation skids for high-fat cream (30–82% fat) and acidic buttermilk — designed with wider plate gaps and corrosion-resistant materials to handle viscous and acidic product streams.</p>
+        <div class="seg-features">
+          <div class="feat-item"><span class="feat-arrow">→</span><span class="feat-text"><strong>Wide-Gap Plate PHE</strong> — Corrugated plates with wide-gap channels for high-viscosity cream</span></div>
+          <div class="feat-item"><span class="feat-arrow">→</span><span class="feat-text"><strong>High-Temperature Holding</strong> — 95°C / 15–30 second holding tube for cream sterilisation</span></div>
+          <div class="feat-item"><span class="feat-arrow">→</span><span class="feat-text"><strong>Back-Pressure Valve</strong> — Maintains product-side pressure to prevent flash evaporation</span></div>
+          <div class="feat-item"><span class="feat-arrow">→</span><span class="feat-text"><strong>SS 316L Wetted Parts</strong> — Acid-resistant material specification for buttermilk duty</span></div>
+          <div class="feat-item"><span class="feat-arrow">→</span><span class="feat-text"><strong>CIP Circuit</strong> — Integrated CIP return connections for alkali and acid cleaning sequences</span></div>
+        </div>
+        <div class="seg-options-grid">
+          <span class="opt-tag">Fresh Cream</span><span class="opt-tag">Whipping Cream</span><span class="opt-tag">Buttermilk</span><span class="opt-tag">Acidophilus</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LTLT Batch Pasteuriser -->
+<section class="segment">
+  <div class="wrap">
+    <div class="seg-inner">
+      <div class="sr">
+        <div class="seg-img tall">
+          <img src="images/storage-tanks.webp" alt="LTLT batch pasteurizer vat"/>
+          <div class="seg-num-badge">03 · LTLT Batch Pasteuriser</div>
+        </div>
+      </div>
+      <div class="seg-content sr sd2">
+        <div class="seg-label">Segment 03</div>
+        <h2 class="seg-title">LTLT Batch<br/>Pasteuriser Vat</h2>
+        <p class="seg-desc">Low-temperature long-time (LTLT) batch pasteurisation vats for small-scale, artisan, and cheese-milk applications — 63°C / 30 minutes in a jacketed, agitated SS vessel.</p>
+        <div class="seg-features">
+          <div class="feat-item"><span class="feat-arrow">→</span><span class="feat-text"><strong>Jacketed Vat</strong> — Double-wall SS vessel with hot water or steam jacket for uniform heating</span></div>
+          <div class="feat-item"><span class="feat-arrow">→</span><span class="feat-text"><strong>Slow-Speed Agitator</strong> — Anchor agitator for gentle product movement without protein damage</span></div>
+          <div class="feat-item"><span class="feat-arrow">→</span><span class="feat-text"><strong>Holding Timer</strong> — Automated hold cycle with temperature alarm and batch record</span></div>
+          <div class="feat-item"><span class="feat-arrow">→</span><span class="feat-text"><strong>Cooling Capability</strong> — Rapid cool-down via chilled-water jacket after hold period</span></div>
+          <div class="feat-item"><span class="feat-arrow">→</span><span class="feat-text"><strong>Capacities</strong> — 500L to 10,000L batch vats as standard; custom sizes available</span></div>
+        </div>
+        <div class="seg-options-grid">
+          <span class="opt-tag">Cheese Milk</span><span class="opt-tag">Artisan Dairy</span><span class="opt-tag">Small Batch</span><span class="opt-tag">Yoghurt Mix</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="lp-cta sr">
+  <p class="etxt">Ready to start?</p>
+  <h2 class="hd" style="text-align:center;max-width:600px">Enquire About Your<br/>Pasteuriser Skid</h2>
+  <p class="body" style="max-width:520px;text-align:center">Provide your product type, flow rate, and holding parameters — our engineers will configure the right system and respond within 24 hours.</p>
+  <div class="lp-cta-btns">
+    <a href="index.html#contact" class="btnp">Request a Proposal</a>
+    <a href="index.html#products" class="btng">← All Products</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="fbot">
+      <p>© 2024 Perfect Engineering Limited. Headquarters: India · Operating in Canada since 2023.</p>
+      <div class="fbot-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="index.html#contact">Contact</a></div>
+    </div>
+  </div>
+</footer>
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('sc',window.scrollY>40);
+  document.getElementById('hbgimg').style.transform=`translateY(${window.scrollY*.15}px)`;
+});
+const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.12});
+document.querySelectorAll('.sr,.hr').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

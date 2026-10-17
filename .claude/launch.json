@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "perfect-engineering",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-s", ".", "-p", "3456", "--no-clipboard"],
+      "port": 3456
+    }
+  ]
+}
