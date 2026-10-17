@@ -18,7 +18,7 @@ html[data-theme="light"] body {
   color: var(--bone);
 }
 
-/* Muted text overrides */
+/* Muted text overrides — NOT inside hero (always dark bg) */
 html[data-theme="light"] .body,
 html[data-theme="light"] .seg-desc,
 html[data-theme="light"] .pcdesc,
@@ -31,10 +31,61 @@ html[data-theme="light"] .seg-label,
 html[data-theme="light"] .seg-options-title,
 html[data-theme="light"] .pcnum,
 html[data-theme="light"] .fbot p,
-html[data-theme="light"] .htag,
-html[data-theme="light"] .scr span,
 html[data-theme="light"] .fctitle {
   color: rgba(0,0,0,.35);
+}
+
+/* ── HERO: always dark background — all text stays white ── */
+html[data-theme="light"] .hero .htag { color: rgba(255,255,255,.33) !important; }
+html[data-theme="light"] .hero .disp,
+html[data-theme="light"] .hero h1 { color: #fff !important; }
+html[data-theme="light"] .hero .scr span { color: rgba(255,255,255,.55) !important; }
+html[data-theme="light"] .hero .sline { background: rgba(255,255,255,.2) !important; }
+html[data-theme="light"] .hero .eline { background: rgba(255,255,255,.12) !important; }
+html[data-theme="light"] .hero .hmeta .pill {
+  border-color: rgba(255,255,255,.15) !important;
+  color: rgba(255,255,255,.5) !important;
+}
+html[data-theme="light"] .hero .hright { color: rgba(255,255,255,.75) !important; }
+html[data-theme="light"] .hero .hright * { color: inherit !important; }
+html[data-theme="light"] .hero .body { color: rgba(255,255,255,.55) !important; }
+html[data-theme="light"] .hero .pill {
+  border-color: rgba(255,255,255,.15) !important;
+  color: rgba(255,255,255,.5) !important;
+}
+html[data-theme="light"] .hero .tag {
+  border-color: rgba(255,255,255,.1) !important;
+  color: rgba(255,255,255,.38) !important;
+}
+html[data-theme="light"] .hero .breadcrumb a,
+html[data-theme="light"] .hero .breadcrumb span { color: rgba(255,255,255,.45) !important; }
+html[data-theme="light"] .hero .btng {
+  border-color: rgba(255,255,255,.25) !important;
+  color: rgba(255,255,255,.85) !important;
+}
+html[data-theme="light"] .hero .btnp {
+  background: #fff !important;
+  border-color: #fff !important;
+  color: #0d0d0d !important;
+}
+html[data-theme="light"] .hero .ey * { color: rgba(255,255,255,.35) !important; }
+
+/* ── NAV: transparent over dark hero — keep links white until scrolled ── */
+html[data-theme="light"] nav:not(.sc) .nlinks a { color: rgba(255,255,255,.65); }
+html[data-theme="light"] nav:not(.sc) .nlinks a:hover,
+html[data-theme="light"] nav:not(.sc) .nlinks a.active { color: #fff; }
+html[data-theme="light"] nav:not(.sc) .ncta {
+  border-color: rgba(255,255,255,.3);
+  color: rgba(255,255,255,.85);
+}
+html[data-theme="light"] nav:not(.sc) .ncta:hover {
+  border-color: rgba(255,255,255,.7);
+  background: rgba(255,255,255,.08);
+}
+html[data-theme="light"] nav:not(.sc) .nmob span { background: rgba(255,255,255,.75); }
+html[data-theme="light"] nav:not(.sc) .theme-toggle {
+  border-color: rgba(255,255,255,.22);
+  background: rgba(255,255,255,.07);
 }
 
 /* Nav */
@@ -81,9 +132,9 @@ html[data-theme="light"] .mob-contact a {
   color: rgba(0,0,0,.35);
 }
 
-/* Hero strip */
+/* Hero strip — sits over dark hero image; needs opaque light bg */
 html[data-theme="light"] .hstrip {
-  background: linear-gradient(135deg,rgba(0,0,0,.04) 0%,rgba(0,0,0,.015) 100%);
+  background: rgba(240,237,232,.92) !important;
   border-color: rgba(0,0,0,.08);
   backdrop-filter: blur(24px) saturate(1.4);
 }
@@ -110,9 +161,9 @@ html[data-theme="light"] .hstrip-icon svg {
 html[data-theme="light"] .hstrip-item:hover .hstrip-icon svg {
   stroke: rgba(0,0,0,.85);
 }
-html[data-theme="light"] .hstrip-lbl { color: rgba(0,0,0,.28); }
-html[data-theme="light"] .hstrip-val { color: rgba(0,0,0,.6); }
-html[data-theme="light"] .hstrip-item:hover .hstrip-val { color: var(--bone); }
+html[data-theme="light"] .hstrip-lbl { color: rgba(0,0,0,.28) !important; }
+html[data-theme="light"] .hstrip-val { color: rgba(0,0,0,.6) !important; }
+html[data-theme="light"] .hstrip-item:hover .hstrip-val { color: var(--bone) !important; }
 html[data-theme="light"] .hstrip-cta {
   background: var(--bone);
   border-color: var(--bone);
