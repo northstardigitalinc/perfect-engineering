@@ -1500,18 +1500,50 @@ staggerGrid('.igrid5','.iitem',45);
 })();
 
 /* ── CONTACT FORM ── */
-document.getElementById('cform').addEventListener('submit',function(e){
+document.getElementById('cform').addEventListener('submit',async function(e){
   e.preventDefault();
   const btn=document.getElementById('sbtn');
-  btn.textContent='Message Sent ✓';
+  const form=this;
+  btn.textContent='Sending…';
   btn.style.opacity='.65';
   btn.disabled=true;
-  this.querySelectorAll('.fi,.fta').forEach(i=>{i.style.borderColor='rgba(255,255,255,.22)';i.style.background='rgba(255,255,255,.06)'});
-  setTimeout(()=>{
-    btn.textContent='Send Inquiry →';btn.style.opacity='';btn.disabled=false;
-    this.reset();
-    this.querySelectorAll('.fi,.fta').forEach(i=>{i.style.borderColor='';i.style.background='';});
-  },4000);
+
+  const data={
+    access_key:'49a47ac2-eb0f-4807-a9ae-530793c9b4ef',
+    to_email:'info@pel13.com',
+    subject:'New Enquiry from perfectengltd.com',
+    name: (document.getElementById('fn').value+' '+document.getElementById('ln').value).trim(),
+    email: document.getElementById('em').value,
+    phone: document.getElementById('ph').value,
+    company: document.getElementById('co').value,
+    industry: document.getElementById('ind').value,
+    message: document.getElementById('msg').value
+  };
+
+  try{
+    const res=await fetch('https://api.web3forms.com/submit',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify(data)
+    });
+    const json=await res.json();
+    if(json.success){
+      btn.textContent='Message Sent ✓';
+      form.querySelectorAll('.fi,.fta').forEach(i=>{i.style.borderColor='rgba(255,255,255,.22)';i.style.background='rgba(255,255,255,.06)'});
+      setTimeout(()=>{
+        btn.textContent='Send Inquiry →';btn.style.opacity='';btn.disabled=false;
+        form.reset();
+        form.querySelectorAll('.fi,.fta').forEach(i=>{i.style.borderColor='';i.style.background='';});
+      },4000);
+    } else {
+      throw new Error(json.message||'Submission failed');
+    }
+  } catch(err){
+    btn.textContent='Failed — try again';
+    btn.style.opacity='';
+    btn.disabled=false;
+    setTimeout(()=>{btn.textContent='Send Inquiry →';},3000);
+  }
 });
 </script>
 </body>
