@@ -7,6 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="theme.css"/>
+<script src="theme.js"></script>
 <style>
 :root{--void:#000;--bone:#fff;--charcoal:#1a1a1a;--panel:#232323;--fd:'Cormorant Garamond',Georgia,serif;--fb:'Inter',system-ui,sans-serif;--hd:clamp(38px,5vw,72px);--r50:50px;--rpill:1000px;--s8:8px;--s12:12px;--s16:16px;--s24:24px;--s32:32px;--s48:48px;--s64:64px;--s96:96px;--s128:128px;--ease:cubic-bezier(.16,1,.3,1)}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -154,7 +156,7 @@ footer{padding:var(--s48) 0;border-top:1px solid rgba(255,255,255,.06)}
     <div class="seg-inner">
       <div class="sr">
         <div class="seg-img tall">
-          <img src="images/pasteurizer-skid.png" alt="HTST milk pasteurizer skid"/>
+          <img loading="lazy" src="images/pasteurizer-skid.png" alt="HTST milk pasteurizer skid"/>
           <div class="seg-num-badge">01 · HTST Milk Pasteuriser</div>
         </div>
       </div>
@@ -184,7 +186,7 @@ footer{padding:var(--s48) 0;border-top:1px solid rgba(255,255,255,.06)}
     <div class="seg-inner rev">
       <div class="sr">
         <div class="seg-img tall">
-          <img src="images/milk-processing.jpg" alt="Cream pasteurizer skid"/>
+          <img loading="lazy" src="images/milk-processing.jpg" alt="Cream pasteurizer skid"/>
           <div class="seg-num-badge">02 · Cream Pasteuriser</div>
         </div>
       </div>
@@ -213,7 +215,7 @@ footer{padding:var(--s48) 0;border-top:1px solid rgba(255,255,255,.06)}
     <div class="seg-inner">
       <div class="sr">
         <div class="seg-img tall">
-          <img src="images/storage-tanks.webp" alt="LTLT batch pasteurizer vat"/>
+          <img loading="lazy" src="images/storage-tanks.webp" alt="LTLT batch pasteurizer vat"/>
           <div class="seg-num-badge">03 · LTLT Batch Pasteuriser</div>
         </div>
       </div>
@@ -255,7 +257,7 @@ footer{padding:var(--s48) 0;border-top:1px solid rgba(255,255,255,.06)}
   </div>
 </footer>
 <script>
-window.addEventListener('scroll',()=>{
+
   document.getElementById('nav').classList.toggle('sc',window.scrollY>40);
   document.getElementById('hbgimg').style.transform=`translateY(${window.scrollY*.15}px)`;
 });

@@ -7,6 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="theme.css"/>
+<script src="theme.js"></script>
 <style>
 :root{--void:#000;--bone:#fff;--charcoal:#1a1a1a;--panel:#232323;--panel2:#2a2a2a;--fd:'Cormorant Garamond',Georgia,serif;--fb:'Inter',system-ui,sans-serif;--dp:clamp(52px,7vw,96px);--hd:clamp(38px,5vw,72px);--sh:clamp(28px,3.5vw,50px);--r50:50px;--rpill:1000px;--s8:8px;--s12:12px;--s16:16px;--s24:24px;--s32:32px;--s48:48px;--s64:64px;--s96:96px;--s128:128px;--ease:cubic-bezier(.16,1,.3,1)}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -123,6 +125,7 @@ footer{padding:var(--s48) 0;border-top:1px solid rgba(255,255,255,.06)}
   </ul>
   <div style="display:flex;align-items:center;gap:var(--s24)">
     <a href="index.html#contact" class="ncta">Get in Touch</a>
+    <button class="theme-toggle" aria-label="Toggle light/dark mode"><svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="rgba(0,0,0,.65)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
     <div class="nmob" id="hambtn" onclick="this.classList.toggle('open');document.getElementById('mobmenu').classList.toggle('open')">
       <span></span><span></span><span></span>
     </div>
@@ -179,7 +182,7 @@ footer{padding:var(--s48) 0;border-top:1px solid rgba(255,255,255,.06)}
     <div class="seg-inner">
       <div class="sr">
         <div class="seg-img tall">
-          <img src="images/beverage-processing.png" alt="Brewery processing plant"/>
+          <img loading="lazy" src="images/beverage-processing.png" alt="Brewery processing plant"/>
           <div class="seg-num-badge">01 · Brewery Plant</div>
         </div>
       </div>
@@ -212,7 +215,7 @@ footer{padding:var(--s48) 0;border-top:1px solid rgba(255,255,255,.06)}
     <div class="seg-inner rev">
       <div class="sr">
         <div class="seg-img tall">
-          <img src="images/storage-tanks.webp" alt="Juice processing plant"/>
+          <img loading="lazy" src="images/storage-tanks.webp" alt="Juice processing plant"/>
           <div class="seg-num-badge">02 · Juice & Soft Drinks</div>
         </div>
       </div>
@@ -245,7 +248,7 @@ footer{padding:var(--s48) 0;border-top:1px solid rgba(255,255,255,.06)}
     <div class="seg-inner">
       <div class="sr">
         <div class="seg-img tall">
-          <img src="images/chemical-processing.webp" alt="Beverage blending plant"/>
+          <img loading="lazy" src="images/chemical-processing.webp" alt="Beverage blending plant"/>
           <div class="seg-num-badge">03 · Blending Plant</div>
         </div>
       </div>
@@ -293,7 +296,7 @@ footer{padding:var(--s48) 0;border-top:1px solid rgba(255,255,255,.06)}
 </footer>
 
 <script>
-window.addEventListener('scroll',()=>{
+
   document.getElementById('nav').classList.toggle('sc',window.scrollY>40);
   document.getElementById('hbgimg').style.transform=`translateY(${window.scrollY*.15}px)`;
 });

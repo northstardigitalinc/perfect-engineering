@@ -7,6 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="theme.css"/>
+<script src="theme.js"></script>
 <style>
 :root{
   --void:#000;--bone:#fff;--charcoal:#1a1a1a;--panel:#232323;--panel2:#2a2a2a;
@@ -143,6 +145,7 @@ footer{padding:var(--s48) 0;border-top:1px solid rgba(255,255,255,.06)}
   </ul>
   <div style="display:flex;align-items:center;gap:var(--s24)">
     <a href="index.html#contact" class="ncta">Get in Touch</a>
+    <button class="theme-toggle" aria-label="Toggle light/dark mode"><svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="rgba(0,0,0,.65)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
     <div class="nmob" id="hambtn" onclick="this.classList.toggle('open');document.getElementById('mobmenu').classList.toggle('open')">
       <span></span><span></span><span></span>
     </div>
@@ -199,7 +202,7 @@ footer{padding:var(--s48) 0;border-top:1px solid rgba(255,255,255,.06)}
     <div class="seg-inner">
       <div class="seg-imgcol sr">
         <div class="seg-img tall">
-          <img src="images/powder-processing.webp" alt="Milk powder spray drying plant"/>
+          <img loading="lazy" src="images/powder-processing.webp" alt="Milk powder spray drying plant"/>
           <div class="seg-num-badge">01 · Milk Powder Plant</div>
         </div>
       </div>
@@ -235,7 +238,7 @@ footer{padding:var(--s48) 0;border-top:1px solid rgba(255,255,255,.06)}
     <div class="seg-inner rev">
       <div class="seg-imgcol sr">
         <div class="seg-img tall">
-          <img src="images/milk-processing.jpg" alt="Whey powder processing plant"/>
+          <img loading="lazy" src="images/milk-processing.jpg" alt="Whey powder processing plant"/>
           <div class="seg-num-badge">02 · Whey Powder Plant</div>
         </div>
       </div>
@@ -271,7 +274,7 @@ footer{padding:var(--s48) 0;border-top:1px solid rgba(255,255,255,.06)}
     <div class="seg-inner">
       <div class="seg-imgcol sr">
         <div class="seg-img tall">
-          <img src="images/chemical-processing.webp" alt="Yeast and dry powder processing"/>
+          <img loading="lazy" src="images/chemical-processing.webp" alt="Yeast and dry powder processing"/>
           <div class="seg-num-badge">03 · Yeast & Chemical Powder</div>
         </div>
       </div>
@@ -324,7 +327,7 @@ footer{padding:var(--s48) 0;border-top:1px solid rgba(255,255,255,.06)}
 </footer>
 
 <script>
-window.addEventListener('scroll',()=>{
+
   document.getElementById('nav').classList.toggle('sc',window.scrollY>40);
   document.getElementById('hbgimg').style.transform=`translateY(${window.scrollY*.15}px)`;
 });

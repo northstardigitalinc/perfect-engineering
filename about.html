@@ -7,6 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="theme.css"/>
+<script src="theme.js"></script>
 <style>
 :root{
   --void:#000;--bone:#fff;--charcoal:#1e1e1e;--panel:#252525;
@@ -326,7 +328,7 @@ h1,h2,.hd,.disp,.sh{text-wrap:balance}
 </div>
 
 <nav>
-  <a href="index.html" class="nlogo"><img src="images/pel-logo.png" alt="Perfect Engineering"/></a>
+  <a href="index.html" class="nlogo"><img loading="lazy" src="images/pel-logo.png" alt="Perfect Engineering"/></a>
   <ul class="nlinks">
     <li><a href="index.html">Home</a></li>
     <li><a href="index.html#services">Services</a></li>
@@ -338,6 +340,7 @@ h1,h2,.hd,.disp,.sh{text-wrap:balance}
   </ul>
   <div style="display:flex;align-items:center;gap:var(--s16)">
     <a href="index.html#contact" class="ncta">Get in Touch</a>
+    <button class="theme-toggle" aria-label="Toggle light/dark mode"><svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="rgba(0,0,0,.65)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
     <div class="nmob" onclick="toggleMob()"><span></span><span></span><span></span></div>
   </div>
 </nav>
@@ -613,13 +616,13 @@ h1,h2,.hd,.disp,.sh{text-wrap:balance}
 
       <div class="fac-photos">
         <div class="fac-photo tall">
-          <img src="images/proof/part1/p08_Image10.jpg" alt="CNC Hydraulic Press Brake Model EHP 200"/>
+          <img loading="lazy" src="images/proof/part1/p08_Image10.jpg" alt="CNC Hydraulic Press Brake Model EHP 200"/>
         </div>
         <div class="fac-photo">
-          <img src="images/proof/part1/p09_Image8.jpg" alt="CNC PUF Injection Machine LP-30"/>
+          <img loading="lazy" src="images/proof/part1/p09_Image8.jpg" alt="CNC PUF Injection Machine LP-30"/>
         </div>
         <div class="fac-photo">
-          <img src="images/proof/part1/p10_Image8.jpg" alt="CNC Plasma Cutting Machine"/>
+          <img loading="lazy" src="images/proof/part1/p10_Image8.jpg" alt="CNC Plasma Cutting Machine"/>
         </div>
       </div>
     </div>
@@ -703,7 +706,7 @@ h1,h2,.hd,.disp,.sh{text-wrap:balance}
   <div class="wrap">
     <div class="ftop">
       <div>
-        <div class="flogo"><img src="images/pel-logo.png" alt="Perfect Engineering Ltd" style="height:44px;width:auto"/></div>
+        <div class="flogo"><img loading="lazy" src="images/pel-logo.png" alt="Perfect Engineering Ltd" style="height:44px;width:auto"/></div>
         <div class="ftag">Numberless Possibilities.<br/>Extreme Efficiency.</div>
         <p style="font-size:14px;color:rgba(255,255,255,.22);line-height:1.7;max-width:270px;margin-top:var(--s16)">Precision stainless steel manufacturing and turnkey process engineering, Canada &amp; India.</p>
       </div>
@@ -752,7 +755,7 @@ window.addEventListener('load',()=>{
 
 // parallax
 const hbgimg=document.getElementById('hbgimg');
-window.addEventListener('scroll',()=>{
+
   if(scrollY<window.innerHeight&&hbgimg)
     hbgimg.style.transform=`translateY(${scrollY*0.3}px)`;
 },{passive:true});
